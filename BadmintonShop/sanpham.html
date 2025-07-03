@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/sanpham.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/trangchu.css">
+
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="page-header-container">
+            <div class="page-header__logo">
+                <a href="trangchu.html">
+                    <img src="./assets/images/anhtrangchu/logo.jpg" alt="logo" class="page-header__logo-icon">
+                </a>
+            </div>
+            <div class="page-header__hotline">
+                <i class="fa-solid fa-phone"></i>
+                HOTLINE:<a href="#">0977508430</a>|<a href="#">0338000308</a>
+            </div>
+            <form action="#" class="page-header__search">
+                <input type="text" class="page-header__search--input" placeholder="Nhập từ khóa...">
+                <button onclick="search()" class="page-header__search--button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="page-header__tool">
+                <div class="page-header__tool-item">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    GIỎ HÀNG
+                </div>
+                <div class="page-header__tool-item">
+                    <i class="fa-solid fa-user"></i>
+                    TÀI KHOẢN
+                </div>
+            </div>
+        </div>
+        <nav class="page-header-navbar">
+            <a class="page-header-navbar__link" href="#">Trang chủ</a>
+            <a class="page-header-navbar__link" href="#">Sản phẩm</a>
+            <a class="page-header-navbar__link" href="#">Tin tức</a>
+            <a class="page-header-navbar__link" href="#">Giới thiệu</a>
+            <a class="page-header-navbar__link" href="#">Đăng nhập</a>
+            <a class="page-header-navbar__link" href="#">Đăng ký</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Side bar -->
+        <section class="sidebar">
+            <div class="filter content--price">
+                <p class="title-filter">CHỌN LOẠI SẢN PHẨM</p>
+                <ul class="selectPriceFilter">
+                    <li>
+                        <label for="lessthan500">
+                            <input type="checkbox" id="lessthan500">
+                            <i>Vợt</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="in500-1tr">
+                            <input type="checkbox" id="in500-1tr">
+                            <i>Giày</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="in1tr-2tr">
+                            <input type="checkbox" id="in1tr-2tr">
+                            <i>Áo</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="in2tr-3tr">
+                            <input type="checkbox" id="in2tr-3tr">
+                            <i>Váy</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="greaterThan2tr">
+                            <input type="checkbox" id="greaterThan2tr">
+                            <i>Quần</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="greaterThan2tr">
+                            <input type="checkbox" id="greaterThan2tr">
+                            <i>Túi vợt</i>
+                        </label>
+                    </li>
+
+
+                    <li>
+                        <label for="greaterThan2tr">
+                            <input type="checkbox" id="greaterThan2tr">
+                            <i>Balo</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="greaterThan2tr">
+                            <input type="checkbox" id="greaterThan2tr">
+                            <i>Phụ kiện</i>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter content--price">
+                <p>CHỌN MỨC GIÁ</p>
+                <ul>
+                    <li>
+                        <label for="lessthan500">
+                            <input type="checkbox" id="lessthan500">
+                            <i>Giá dưới 500.000đ</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="in500-1tr">
+                            <input type="checkbox" id="in500-1tr">
+                            <i>500.000đ - 1 triệu</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="in1tr-2tr">
+                            <input type="checkbox" id="in1tr-2tr">
+                            <i>1 - 2 triệu</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="in2tr-3tr">
+                            <input type="checkbox" id="in2tr-3tr">
+                            <i>2 - 3 triệu</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="greaterThan2tr">
+                            <input type="checkbox" id="greaterThan2tr">
+                            <i>Giá trên 3 triệu</i>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter content--size">
+                <p>LỌC THEO SIZE</p>
+                <ul>
+                    <li>
+                        <label for="size-30">
+                            <input type="checkbox" id="size-30">
+                            <i>30</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="size-31">
+                            <input type="checkbox" id="size-31">
+                            <i>31</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="size-32">
+                            <input type="checkbox" id="size-32">
+                            <i>32</i>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="size-33">
+                            <input type="checkbox" id="size-33">
+                            <i>33</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-34">
+                            <input type="checkbox" id="size-34">
+                            <i>34</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-35">
+                            <input type="checkbox" id="size-35">
+                            <i>35</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-36">
+                            <input type="checkbox" id="size-36">
+                            <i>36</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-37">
+                            <input type="checkbox" id="size-37">
+                            <i>37</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-37.5">
+                            <input type="checkbox" id="size-37.5">
+                            <i>37.5</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-38">
+                            <input type="checkbox" id="size-38">
+                            <i>38</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-39">
+                            <input type="checkbox" id="size-39">
+                            <i>39</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-39.5">
+                            <input type="checkbox" id="size-39.5">
+                            <i>39.5</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-40">
+                            <input type="checkbox" id="size-40">
+                            <i>40</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-40.5">
+                            <input type="checkbox" id="size-40.5">
+                            <i>40.5</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-41">
+                            <input type="checkbox" id="size-41">
+                            <i>41</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-41.5">
+                            <input type="checkbox" id="size-41.5">
+                            <i>41.5</i>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label for="size-42">
+                            <input type="checkbox" id="size-42">
+                            <i>42</i>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- List item -->
+        <section class=" content">
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">Giá: 4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">Giá: 4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">Giá: 4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">Giá: 4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">Giá: 4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">Giá: 4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">Giá: 4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">Giá: 4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">Giá: 4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">Giá: 4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>
+                    <img src="./assets/images/anhsanpham/vot1.webp" alt="">
+                </div>
+                <div class="descriptionItem">
+                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
+                    <div class="infoOtherItem">
+                        <p class="costItem">Giá: 4.309.000 ₫</p>
+                        <div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
