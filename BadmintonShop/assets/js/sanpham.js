@@ -7,89 +7,89 @@ const itemList = [
   {
     img: "./assets/images/anhsanpham/vot1.jpg",
     nameItem: "Vợt cầu lông Yonex Nanoflare 700 Pro 2024",
-    costItem: "Giá: 4.309.000 ₫"
+    costItem: "4.309.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/vot2.jpg",
     nameItem: "Vợt Cầu Lông Victor Thruster Ryuga Metallic CPS",
-    costItem: "Giá: 3.950.000 ₫"
+    costItem: "3.950.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/vot3.jpg",
     nameItem: "Vợt cầu lông Lining Halbertec 3000",
-    costItem: "Giá: 1.390.000 ₫"
+    costItem: "1.390.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/vot4.jpg",
     nameItem: "Vợt cầu lông Mizuno Fortius 11 Quick",
-    costItem: "Giá: 4.289.000 ₫"
+    costItem: "4.289.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/vot5.jpg",
     nameItem: "Vợt cầu lông VNB V200 Xanh chính hãng",
-    costItem: "Giá: 529.000 ₫"
+    costItem: "529.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/giay1.jpg",
     nameItem: "Giày cầu lông Yonex SHB 65X4 2025",
-    costItem: "Giá: 1.809.000 ₫"
+    costItem: "1.809.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/giay2.jpg",
     nameItem: "Giày cầu lông Victor P-UTM A",
-    costItem: "Giá: 1.800.000 ₫"
+    costItem: "1.800.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/giay3.jpg",
     nameItem: "Giày cầu lông Lining AYTU025-1 chính hãng",
-    costItem: "Giá: 1.325.000 ₫"
+    costItem: "1.325.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/giay4.jpg",
     nameItem: "Giày cầu lông Victor Doraemon P-DRM A",
-    costItem: "Giá: 1.850.000 ₫"
+    costItem: "1.850.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/giay5.jpg",
     nameItem: "Giày cầu lông Lining AYAU007-4",
-    costItem: "Giá: 2.500.000 ₫"
+    costItem: "2.500.000 ₫"
   },
 
   {
     img: "./assets/images/anhsanpham/ao1.jpg",
     nameItem: "Áo cầu lông Yonex A293 nam - Trắng",
-    costItem: "Giá: 130.000 ₫"
+    costItem: "130.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/ao2.jpg",
     nameItem: "Áo cầu lông Victor 2115 Nam - Trắng xanh",
-    costItem: "Giá: 160.000 ₫"
+    costItem: "160.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/ao3.jpg",
     nameItem: "Áo cầu lông Lining 25005 nam - Đen",
-    costItem: "Giá: 160.000 ₫"
+    costItem: "160.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/ao4.jpg",
     nameItem: "Áo cầu lông Lining 25001 nữ - Tím hồng",
-    costItem: "Giá: 160.000 ₫"
+    costItem: "160.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/ao5.jpg",
     nameItem: "Áo cầu lông Yonex TRM2883 chính hãng",
-    costItem: "Giá: 189.000 ₫"
+    costItem: "189.000 ₫"
   },
 
   {
     img: "./assets/images/anhsanpham/vay1.jpg",
     nameItem: "Váy cầu lông Yonex 26118EX - Đen chính hãng",
-    costItem: "Giá: 500.000 ₫"
+    costItem: "500.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/vay2.jpg",
     nameItem: "Váy cầu lông Yonex 062 - Đỏ",
-    costItem: "Giá: 150.000 ₫"
+    costItem: "150.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/vay3.jpg",
@@ -136,7 +136,7 @@ const itemList = [
 
   {
     img: "./assets/images/anhsanpham/quan5.jpg",
-    nameItem: "Quần cầu lông Yonex TSM2911 - Spear Mint chính hãng",
+    nameItem: "Quần cầu lông Yonex TSM2911 hính hãng",
     costItem: "Giá: 149.000 ₫"
   },
 

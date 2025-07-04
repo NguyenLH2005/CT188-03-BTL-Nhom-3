@@ -43,8 +43,10 @@ header {
     /* border-radius: 0 0 18px 18px; */
     /* background: linear-gradient(to right, #00b3a4, #00b3a4); */
     /* background-image: url(./images/anhtrangchu/background.jpg); */
-    background-color: rgba(37, 193, 143, 0.516);
-    margin-bottom: 10px;
+    /* background-color: rgba(37, 193, 143, 0.516); */
+    /* background-color: #BEFFF7; */
+    background-color: #014034;
+    /* margin-bottom: 10px; */
 }
 
 .page-header-container {
