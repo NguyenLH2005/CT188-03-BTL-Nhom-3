@@ -5,11 +5,13 @@ Author: Tran Anh Vu
 
 const itemList = [
   {
+    id: 'vot1',
     img: "./assets/images/anhsanpham/vot1.jpg",
     nameItem: "Vợt cầu lông Yonex Nanoflare 700 Pro 2024",
     costItem: "4.309.000 ₫"
   },
   {
+    id: 'vot2',
     img: "./assets/images/anhsanpham/vot2.jpg",
     nameItem: "Vợt Cầu Lông Victor Thruster Ryuga Metallic CPS",
     costItem: "3.950.000 ₫"
@@ -147,7 +149,7 @@ const itemList = [
 var itemContainer = document.querySelector('.content');
 var item = document.querySelector('.item');
 
-itemList.forEach(data => {
+itemList.forEach(function (data) {
   const clone = item.cloneNode(true);
   clone.style.display = "block";
   clone.querySelector('img').src = data.img;

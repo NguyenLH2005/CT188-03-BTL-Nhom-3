@@ -134,6 +134,7 @@ main {
 }
 
 .item {
+    text-decoration: none;
     margin: 10px 10px;
     border: solid rgb(188, 165, 165) 2px;
     box-sizing: border-box;
@@ -155,8 +156,7 @@ main {
     border-radius: 30px;
 }
 
-.item__iconHeart
-{
+.item__iconHeart {
     font-size: 20px;
     position: absolute;
     right: 5%;
