@@ -65,6 +65,7 @@ main {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     /* bóng nhẹ */
     margin: 4px 0px;
+    position: relative;
 }
 
 .sidebar__filter:hover {
@@ -76,6 +77,39 @@ main {
     display: flex;
 
 }
+
+.sidebar__filter__subContaniner {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #f5f5f5;
+    width: 100%;
+    border: #014034 solid;
+    left: 0%;
+    border-radius: 20px;
+    color: #014034;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar__filter:hover .sidebar__filter__subContaniner
+{
+    display: block;
+}
+.sidebar__filter__subContaniner p {
+    display: block;
+    padding: 4px 4px;
+    margin: 4px;
+    background-color: #fff;
+    border-radius: 999px;
+    border: 1px solid #87BBA2;
+    text-align: center;
+}
+
+.sidebar__filter__subContaniner p:hover {
+    background-color: #014034;
+    color: #fff;
+}
+
 
 
 
