@@ -94,50 +94,50 @@ const itemList = [
   {
     img: "./assets/images/anhsanpham/vay3.jpg",
     nameItem: "Váy cầu lông Lining 035 - Trắng",
-    costItem: "Giá: 150.000 ₫"
+    costItem: "150.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/vay4.jpg",
     nameItem: "Váy cầu lông Victor 7053 - Trắng đen",
-    costItem: "Giá: 150.000 ₫"
+    costItem: "150.000 ₫"
   },
   {
     img: "./assets/images/anhsanpham/vay5.jpg",
     nameItem: "Váy cầu lông Victor 7053 - Đen trắng",
-    costItem: "Giá: 150.000 ₫"
+    costItem: "150.000 ₫"
   },
 
   {
     img: "./assets/images/anhsanpham/quan1.jpg",
     nameItem: "Quần cầu lông Yonex TSM2910 chính hãng",
-    costItem: "Giá: 149.000 ₫"
+    costItem: "149.000 ₫"
   },
 
   {
     img: "./assets/images/anhsanpham/quan2.jpg",
     nameItem: "Quần cầu lông Victor 628 - Xanh biển",
-    costItem: "Giá: 130.000 ₫"
+    costItem: "130.000 ₫"
   },
 
 
   {
     img: "./assets/images/anhsanpham/quan3.jpg",
     nameItem: "Quần cầu lông Lining 967 - Trắng",
-    costItem: "Giá: 130.000 ₫"
+    costItem: "130.000 ₫"
   },
 
 
   {
     img: "./assets/images/anhsanpham/quan4.jpg",
     nameItem: "Quần cầu lông Lining 92009 - Xanh ngọc",
-    costItem: "Giá: 130.000 ₫"
+    costItem: "130.000 ₫"
   },
 
 
   {
     img: "./assets/images/anhsanpham/quan5.jpg",
     nameItem: "Quần cầu lông Yonex TSM2911 hính hãng",
-    costItem: "Giá: 149.000 ₫"
+    costItem: "149.000 ₫"
   },
 
 
