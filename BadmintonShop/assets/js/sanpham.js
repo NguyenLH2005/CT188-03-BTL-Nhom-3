@@ -289,6 +289,23 @@ function filterTrouser()
   }
 }
 
+//To filter cost less than 500000
+function filterLessThan500()
+{
+  for(var i=1; i<all.length; i++)
+  {
+    all[i].style.display = 'none';
+  }
+
+  for(var i=1; i<all.length; i++)
+  {
+    if(all[i].classList.contains("lessThan500"))
+    {
+      all[i].style.display = 'block';
+    }
+  }
+}
+
 // Select All
 var selectAll = document.querySelector('.sidebar__filter--all');
 selectAll.addEventListener("click",filterAll);
@@ -316,6 +333,26 @@ var selectTrouser = document.querySelector('.sidebar__filter__subContaniner p:nt
 selectTrouser.addEventListener("click",filterTrouser);
 
 
+var subContainers = document.querySelectorAll('.sidebar__filter__subContaniner');
+// Select cost less than 500 
+var selectLessThan500 = subContainers[1].querySelector('p:first-child');
+selectLessThan500.addEventListener("click",filterLessThan500);
+
+// Select cost from 500 to 1M 
+var selectLessThan500 = subContainers[1].querySelector('p:first-child');
+selectLessThan500.addEventListener("click",filterLessThan500);
+
+// Select cost from 1M to 2M 
+var selectLessThan500 = subContainers[1].querySelector('p:first-child');
+selectLessThan500.addEventListener("click",filterLessThan500);
+
+// Select cost from 2M to 3M 
+var selectLessThan500 = subContainers[1].querySelector('p:first-child');
+selectLessThan500.addEventListener("click",filterLessThan500);
+
+// Select cost more than 3M 
+var selectLessThan500 = subContainers[1].querySelector('p:first-child');
+selectLessThan500.addEventListener("click",filterLessThan500);
 
 
 
