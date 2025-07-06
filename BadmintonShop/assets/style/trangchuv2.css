@@ -16,7 +16,7 @@ body {
 
 .home {
     display: grid;
-    grid-template-rows: 210px auto 300px;
+    grid-template-rows: 210px auto 700px;
     grid-template-columns: 20% 60% 20%;
     grid-template-areas:
         "header header header"
@@ -225,26 +225,86 @@ header {
 /* FOOTER */
 .page-footer {
     grid-area: footer;
-    background: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
-    color: #333;
+    background: url(../images/anhtrangchu/footer-background-op0.25.png) center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 18px 18px 0 0;
-    box-shadow: 0 -2px 12px rgba(148, 187, 233, 0.10);
-    padding: 32px 0 0 0;
-    font-size: 16px;
-    min-height: 200px;
+    box-shadow: 0 -2px 12px rgba(148, 187, 233, 0.10); */
+    /* padding: 32px 0 0 0; */
+    /* font-size: 16px;*/
+    min-height: 600px;
 }
 
-.page-footer a {
+.page-footer--top {
+    margin-top: 50px;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-content: flex-start;
+    min-height: 400px;
+}
+
+.page-footer--top__block {
+    width: 20%;
+}
+
+.page-footer--top__block p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.page-footer--top__block ul {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.ul-nodclr {
+    list-style-type: none;
+}
+.ul-dclr {
+    padding-left: 20px;
+}
+
+.ul-nodclr a:hover {
+    color: darkblue;
+}
+
+.ul-nodclr a {
     color: #e74c3c;
     text-decoration: none;
-    font-weight: 500;
     transition: color 0.2s;
 }
 
-.page-footer a:hover {
-    color: #8ec5fc;
+.ul-dclr a {
+    text-decoration: none;
+    color: black;
+}
+
+.ul-dclr a:hover {
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.page-footer--bottom {
+    background: url(../images/anhtrangchu/footer-of-footer.png) center;
+    min-height: 220px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.page-footer--bottom img{
+    padding-top: 5px;
 }
