@@ -5,117 +5,138 @@ Author: Tran Anh Vu
 
 const itemList = [
   {
-    id: 'vot1',
+    class:'racket moreThan3M',
     img: "./assets/images/anhsanpham/vot1.jpg",
     nameItem: "Vợt cầu lông Yonex Nanoflare 700 Pro 2024",
     costItem: "4.309.000 ₫"
   },
   {
-    id: 'vot2',
+    class:'racket moreThan3M',
     img: "./assets/images/anhsanpham/vot2.jpg",
     nameItem: "Vợt Cầu Lông Victor Thruster Ryuga Metallic CPS",
     costItem: "3.950.000 ₫"
   },
   {
+    class:'racket from1MTo2M',
     img: "./assets/images/anhsanpham/vot3.jpg",
     nameItem: "Vợt cầu lông Lining Halbertec 3000",
     costItem: "1.390.000 ₫"
   },
   {
+    class:'racket moreThan3M',
     img: "./assets/images/anhsanpham/vot4.jpg",
     nameItem: "Vợt cầu lông Mizuno Fortius 11 Quick",
     costItem: "4.289.000 ₫"
   },
   {
+    class:'racket from500To1M',
     img: "./assets/images/anhsanpham/vot5.jpg",
     nameItem: "Vợt cầu lông VNB V200 Xanh chính hãng",
     costItem: "529.000 ₫"
   },
   {
+    class:'shoes from1MTo2M',
     img: "./assets/images/anhsanpham/giay1.jpg",
     nameItem: "Giày cầu lông Yonex SHB 65X4 2025",
     costItem: "1.809.000 ₫"
   },
   {
+    class:'shoes from1MTo2M',
     img: "./assets/images/anhsanpham/giay2.jpg",
     nameItem: "Giày cầu lông Victor P-UTM A",
     costItem: "1.800.000 ₫"
   },
   {
+    class:'shoes from1MTo2M',
     img: "./assets/images/anhsanpham/giay3.jpg",
     nameItem: "Giày cầu lông Lining AYTU025-1 chính hãng",
     costItem: "1.325.000 ₫"
   },
   {
+    class:'shoes from1MTo2M',
     img: "./assets/images/anhsanpham/giay4.jpg",
     nameItem: "Giày cầu lông Victor Doraemon P-DRM A",
     costItem: "1.850.000 ₫"
   },
   {
+    class:'shoes from2MTo3M',
     img: "./assets/images/anhsanpham/giay5.jpg",
     nameItem: "Giày cầu lông Lining AYAU007-4",
     costItem: "2.500.000 ₫"
   },
 
   {
+    class:'shirt lessThan500',
     img: "./assets/images/anhsanpham/ao1.jpg",
     nameItem: "Áo cầu lông Yonex A293 nam - Trắng",
     costItem: "130.000 ₫"
   },
   {
+    class:'shirt lessThan500',
     img: "./assets/images/anhsanpham/ao2.jpg",
     nameItem: "Áo cầu lông Victor 2115 Nam - Trắng xanh",
     costItem: "160.000 ₫"
   },
   {
+    class:'shirt lessThan500',
     img: "./assets/images/anhsanpham/ao3.jpg",
     nameItem: "Áo cầu lông Lining 25005 nam - Đen",
     costItem: "160.000 ₫"
   },
+
   {
+    class:'shirt lessThan500',
     img: "./assets/images/anhsanpham/ao4.jpg",
     nameItem: "Áo cầu lông Lining 25001 nữ - Tím hồng",
     costItem: "160.000 ₫"
   },
   {
+    class:'shirt lessThan500',
     img: "./assets/images/anhsanpham/ao5.jpg",
     nameItem: "Áo cầu lông Yonex TRM2883 chính hãng",
     costItem: "189.000 ₫"
   },
 
   {
+    class:'dress from500To1M',
     img: "./assets/images/anhsanpham/vay1.jpg",
     nameItem: "Váy cầu lông Yonex 26118EX - Đen chính hãng",
     costItem: "500.000 ₫"
   },
   {
+    class:'dress lessThan500',
     img: "./assets/images/anhsanpham/vay2.jpg",
     nameItem: "Váy cầu lông Yonex 062 - Đỏ",
     costItem: "150.000 ₫"
   },
   {
+    class:'dress lessThan500',
     img: "./assets/images/anhsanpham/vay3.jpg",
     nameItem: "Váy cầu lông Lining 035 - Trắng",
     costItem: "150.000 ₫"
   },
   {
+    class:'dress lessThan500',
     img: "./assets/images/anhsanpham/vay4.jpg",
     nameItem: "Váy cầu lông Victor 7053 - Trắng đen",
     costItem: "150.000 ₫"
   },
   {
+    class:'dress lessThan500',
     img: "./assets/images/anhsanpham/vay5.jpg",
     nameItem: "Váy cầu lông Victor 7053 - Đen trắng",
     costItem: "150.000 ₫"
   },
 
   {
+    class:'trouser lessThan500',
     img: "./assets/images/anhsanpham/quan1.jpg",
     nameItem: "Quần cầu lông Yonex TSM2910 chính hãng",
     costItem: "149.000 ₫"
   },
 
   {
+    class:'trouser lessThan500',
     img: "./assets/images/anhsanpham/quan2.jpg",
     nameItem: "Quần cầu lông Victor 628 - Xanh biển",
     costItem: "130.000 ₫"
@@ -123,6 +144,7 @@ const itemList = [
 
 
   {
+    class:'trouser',
     img: "./assets/images/anhsanpham/quan3.jpg",
     nameItem: "Quần cầu lông Lining 967 - Trắng",
     costItem: "130.000 ₫"
@@ -130,6 +152,7 @@ const itemList = [
 
 
   {
+    class:'trouser',
     img: "./assets/images/anhsanpham/quan4.jpg",
     nameItem: "Quần cầu lông Lining 92009 - Xanh ngọc",
     costItem: "130.000 ₫"
@@ -137,6 +160,7 @@ const itemList = [
 
 
   {
+    class:'trouser',
     img: "./assets/images/anhsanpham/quan5.jpg",
     nameItem: "Quần cầu lông Yonex TSM2911 hính hãng",
     costItem: "149.000 ₫"
@@ -150,7 +174,12 @@ var itemContainer = document.querySelector('.content');
 var item = document.querySelector('.item');
 
 itemList.forEach(function (data) {
-  const clone = item.cloneNode(true);
+  const clone = item.cloneNode(true); 
+  let classArray = data.class.split(" ");
+  for(let i=0; i < classArray.length; i++)
+  {
+    clone.classList.add(classArray[i]);
+  }
   clone.style.display = "block";
   clone.querySelector('img').src = data.img;
   clone.querySelector('.nameItem').textContent = data.nameItem;
@@ -158,4 +187,137 @@ itemList.forEach(function (data) {
   itemContainer.appendChild(clone);
 }
 )
+
+//To chose all item of product
+var all = document.querySelectorAll('.content .item');
+
+
+//To filter all item
+function filterAll()
+{
+  for(var i=1; i<all.length; i++)
+  {
+      all[i].style.display = 'block';
+  }
+}
+
+//To filter racket item
+function filterRacket()
+{
+  for(var i=1; i<all.length; i++)
+  {
+    all[i].style.display = 'none';
+  }
+
+  for(var i=1; i<all.length; i++)
+  {
+    if(all[i].classList.contains("racket"))
+    {
+      all[i].style.display = 'block';
+    }
+  }
+}
+
+
+//To filter shoes item
+function filterShoes()
+{
+  for(var i=1; i<all.length; i++)
+  {
+    all[i].style.display = 'none';
+  }
+
+  for(var i=1; i<all.length; i++)
+  {
+    if(all[i].classList.contains("shoes"))
+    {
+      all[i].style.display = 'block';
+    }
+  }
+}
+
+
+//To filter shirt item
+function filterShirt()
+{
+  for(var i=1; i<all.length; i++)
+  {
+    all[i].style.display = 'none';
+  }
+
+  for(var i=1; i<all.length; i++)
+  {
+    if(all[i].classList.contains("shirt"))
+    {
+      all[i].style.display = 'block';
+    }
+  }
+}
+
+
+//To filter dress item
+function filterDress()
+{
+  for(var i=1; i<all.length; i++)
+  {
+    all[i].style.display = 'none';
+  }
+
+  for(var i=1; i<all.length; i++)
+  {
+    if(all[i].classList.contains("dress"))
+    {
+      all[i].style.display = 'block';
+    }
+  }
+}
+
+//To filter dress trouser
+function filterTrouser()
+{
+  for(var i=1; i<all.length; i++)
+  {
+    all[i].style.display = 'none';
+  }
+
+  for(var i=1; i<all.length; i++)
+  {
+    if(all[i].classList.contains("trouser"))
+    {
+      all[i].style.display = 'block';
+    }
+  }
+}
+
+// Select All
+var selectAll = document.querySelector('.sidebar__filter--all');
+selectAll.addEventListener("click",filterAll);
+
+// Select Racket
+var selectRacket = document.querySelector('.sidebar__filter__subContaniner p:first-child');
+selectRacket.addEventListener("click",filterRacket);
+
+// Select Shoes
+var selectShoes = document.querySelector('.sidebar__filter__subContaniner p:nth-child(2)');
+selectShoes.addEventListener("click",filterShoes);
+
+//Select Shirt
+var selectShoes = document.querySelector('.sidebar__filter__subContaniner p:nth-child(3)');
+selectShoes.addEventListener("click",filterShirt);
+
+
+// Select Dress
+var selectDress = document.querySelector('.sidebar__filter__subContaniner p:nth-child(4)');
+selectDress.addEventListener("click",filterDress);
+
+
+// Select Trouser
+var selectTrouser = document.querySelector('.sidebar__filter__subContaniner p:nth-child(5)');
+selectTrouser.addEventListener("click",filterTrouser);
+
+
+
+
+
+
 
