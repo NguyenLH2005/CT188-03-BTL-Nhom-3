@@ -206,6 +206,25 @@ function countHidenItem(all)
     }
     return cnt;
 }
+//To count type of filter follow
+function countTypeOfFilter(selectedFilter)
+{
+  let count = 0;
+
+  if(selectedFilter.classList.contains('typeFilterItem'))
+  {
+    count++;
+  }
+  if(selectedFilter.classList.contains('typeFilterCost'))
+  {
+    count++;
+  }
+  if(selectedFilter.classList.contains('typeFilterBranch'))
+  {
+    count++;
+  }
+  return count;
+}
 
 
 //To filter all item
@@ -217,310 +236,355 @@ function filterAll()
   }
 }
 
+// Hàm filter chung cho từng loại
+function filterByClass(className, typeClass) {
+  if (countHidenItem(all) === 0) {
+    for (var i = 1; i < all.length; i++) {
+      all[i].style.display = 'none';
+    }
+        console.log('Vao dk if 1');
+  }
+  selectedFilter.classList.add(typeClass);
+  for (var i = 1; i < all.length; i++) {
+    if(countTypeOfFilter(selectedFilter) < 2){
+      if(all[i].classList.contains(className))
+      {
+        all[i].style.display = 'block';
+      }
+    }
+    else
+    {
+      if(all[i].style.display === 'block' && !all[i].classList.contains(className))
+          {
+          
+              all[i].style.display = 'none';
+              console.log(all[i]);
+              console.log('Vao dk else if');
+          }
+    }
+  }
+}
+
+
 //To filter racket item
-function filterRacket()
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-    {
-      all[i].style.display = 'none';
-    }
-  }
-
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("racket"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
-
-
-//To filter shoes item
-function filterShoes()
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-    {
-      all[i].style.display = 'none';
-    }
-  }
-
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("shoes"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
+// function filterRacket()
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//     {
+//       all[i].style.display = 'none';
+//     }
+//   }
+//   selectedFilter.classList.add("typeFilterItem");
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("racket") && countTypeOfFilter(selectedFilter)<2)
+//     {
+//         all[i].style.display = 'block';
+//     }
+//     else
+//     {
+//       if(all[i].style.display === 'block' && !all[i].classList.contains('racket'))
+//       {        
+//         all[i].style.display = 'none';
+//       }   
+//     }
+//   }
+// }
 
 
-//To filter shirt item
-function filterShirt()
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-    {
-      all[i].style.display = 'none';
-    }
-  }
+// //To filter shoes item
+// function filterShoes()
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//     {
+//       all[i].style.display = 'none';
+//     }
+//   }
 
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("shirt"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
-
-
-//To filter dress item
-function filterDress()
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-    {
-      all[i].style.display = 'none';
-    }
-  }
-
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("dress"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
-
-//To filter dress trouser
-function filterTrouser()
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-    {
-      all[i].style.display = 'none';
-    }
-  }
-
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("trouser"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
-
-//To filter cost less than 500000
-function filterLessThan500()
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-    {
-      all[i].style.display = 'none';
-    }
-  }
-
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("lessThan500"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
-
-//To filter cost 500 to 1M
-function filter500To1M()
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-  {
-    all[i].style.display = 'none';
-  }
-  }
-
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("from500To1M"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
-
-  //To filter cost from 1M to 2M
-function filter1MTo2M()
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-  {
-    all[i].style.display = 'none';
-  }
-  }
-
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("from1MTo2M"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
-
-  //To filter cost from 2M to 3M
-function filter2MTo3M()
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-  {
-    all[i].style.display = 'none';
-  }
-  }
-
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("from2MTo3M"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
-
-  //To filter cost more than 3M
-function filterMoreThan3M() 
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-  {
-    all[i].style.display = 'none';
-  }
-  }
-
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("moreThan3M"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("shoes"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
 
 
-  //To filter Yonex branch
-function filterYonex() 
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-  {
-    all[i].style.display = 'none';
-  }
-  }
+// //To filter shirt item
+// function filterShirt()
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//     {
+//       all[i].style.display = 'none';
+//     }
+//   }
 
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("yonex"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
-
-  //To filter Lining branch
-function filterLining() 
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-  {
-    all[i].style.display = 'none';
-  }
-  }
-
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("lining"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
-
-  //To filter Victor branch
-function filterVictor() 
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-  {
-    all[i].style.display = 'none';
-  }
-  }
-
-  for(var i=1; i<all.length; i++)
-  {
-    if(all[i].classList.contains("victor"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("shirt"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
 
 
-  //To filter Victor branch
-function filterMizuno() 
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-  {
-    all[i].style.display = 'none';
-  }
-  }
+// //To filter dress item
+// function filterDress()
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//     {
+//       all[i].style.display = 'none';
+//     }
+//   }
 
-  for(var i=1; i<all.length; i++)
-  {
-  if(all[i].classList.contains("mizuno"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("dress"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
 
-  //To filter Victor branch
-function filterVNB() 
-{
-  if(countHidenItem(all)===0)
-  {
-    for(var i=1; i<all.length; i++)
-  {
-    all[i].style.display = 'none';
-  }
-  }
+// //To filter dress trouser
+// function filterTrouser()
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//     {
+//       all[i].style.display = 'none';
+//     }
+//   }
 
-  for(var i=1; i<all.length; i++)
-  {
-  if(all[i].classList.contains("vnb"))
-    {
-      all[i].style.display = 'block';
-    }
-  }
-}
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("trouser"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
+
+// //To filter cost less than 500000
+// function filterLessThan500()
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//     {
+//       all[i].style.display = 'none';
+//     }
+//   }
+
+//   selectedFilter.classList.add("typeFilterCost");
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("lessThan500")&&countTypeOfFilter(selectedFilter)<2)
+//     {
+//       if(countTypeOfFilter(selectedFilter)<2)
+//       {
+//         all[i].style.display = 'block';
+//       }
+//     }
+//     else if(all[i].style.display === 'block' && !all[i].classList.contains('lessThan500'))
+//     { 
+//       all[i].style.display = 'none';
+//     }
+//   }
+// }
+
+// //To filter cost 500 to 1M
+// function filter500To1M()
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//   {
+//     all[i].style.display = 'none';
+//   }
+//   }
+
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("from500To1M"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
+
+//   //To filter cost from 1M to 2M
+// function filter1MTo2M()
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//   {
+//     all[i].style.display = 'none';
+//   }
+//   }
+
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("from1MTo2M"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
+
+//   //To filter cost from 2M to 3M
+// function filter2MTo3M()
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//   {
+//     all[i].style.display = 'none';
+//   }
+//   }
+
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("from2MTo3M"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
+
+//   //To filter cost more than 3M
+// function filterMoreThan3M() 
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//   {
+//     all[i].style.display = 'none';
+//   }
+//   }
+
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("moreThan3M"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
+
+
+//   //To filter Yonex branch
+// function filterYonex() 
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//   {
+//     all[i].style.display = 'none';
+//   }
+//   }
+
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("yonex"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
+
+//   //To filter Lining branch
+// function filterLining() 
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//   {
+//     all[i].style.display = 'none';
+//   }
+//   }
+
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("lining"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
+
+//   //To filter Victor branch
+// function filterVictor() 
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//   {
+//     all[i].style.display = 'none';
+//   }
+//   }
+
+//   for(var i=1; i<all.length; i++)
+//   {
+//     if(all[i].classList.contains("victor"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
+
+
+//   //To filter Victor branch
+// function filterMizuno() 
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//   {
+//     all[i].style.display = 'none';
+//   }
+//   }
+
+//   for(var i=1; i<all.length; i++)
+//   {
+//   if(all[i].classList.contains("mizuno"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
+
+//   //To filter Victor branch
+// function filterVNB() 
+// {
+//   if(countHidenItem(all)===0)
+//   {
+//     for(var i=1; i<all.length; i++)
+//   {
+//     all[i].style.display = 'none';
+//   }
+//   }
+
+//   for(var i=1; i<all.length; i++)
+//   {
+//   if(all[i].classList.contains("vnb"))
+//     {
+//       all[i].style.display = 'block';
+//     }
+//   }
+// }
 
 
 // Select All
@@ -529,71 +593,148 @@ selectAll.addEventListener("click",filterAll);
 
 // Select Racket
 var selectRacket = document.querySelector('.sidebar__filter__subContaniner p:first-child');
-selectRacket.addEventListener("click",filterRacket);
+selectRacket.addEventListener("click",function()
+{
+  filterByClass('racket','typeFilterItem');
+});
 
 // Select Shoes
 var selectShoes = document.querySelector('.sidebar__filter__subContaniner p:nth-child(2)');
-selectShoes.addEventListener("click",filterShoes);
-
+selectShoes.addEventListener("click", function() {
+  filterByClass('shoes', 'typeFilterItem');
+});
 //Select Shirt
-var selectShoes = document.querySelector('.sidebar__filter__subContaniner p:nth-child(3)');
-selectShoes.addEventListener("click",filterShirt);
+var selectShirt = document.querySelector('.sidebar__filter__subContaniner p:nth-child(3)');
+selectShirt.addEventListener("click", function() {
+  filterByClass('shirt', 'typeFilterItem');
+});
 
 
 // Select Dress
 var selectDress = document.querySelector('.sidebar__filter__subContaniner p:nth-child(4)');
-selectDress.addEventListener("click",filterDress);
+selectDress.addEventListener("click", function() {
+  filterByClass('dress', 'typeFilterItem');
+});
 
 
 // Select Trouser
 var selectTrouser = document.querySelector('.sidebar__filter__subContaniner p:nth-child(5)');
-selectTrouser.addEventListener("click",filterTrouser);
+selectTrouser.addEventListener("click", function() {
+  filterByClass('trouser', 'typeFilterItem');
+});
 
 
 var subContainers = document.querySelectorAll('.sidebar__filter__subContaniner');
 // Select cost less than 500 
+var subContainers = document.querySelectorAll('.sidebar__filter__subContaniner');
 var selectLessThan500 = subContainers[1].querySelector('p:first-child');
-selectLessThan500.addEventListener("click",filterLessThan500);
+selectLessThan500.addEventListener("click", function() {
+  filterByClass('lessThan500', 'typeFilterCost');
+});
 
 // Select cost from 500 to 1M 
 var selectFrom500To1M = subContainers[1].querySelector('p:nth-child(2)');
-selectFrom500To1M.addEventListener("click",filter500To1M);
+selectFrom500To1M.addEventListener("click", function() {
+  filterByClass('from500To1M', 'typeFilterCost');
+});
 
 // Select cost from 1M to 2M 
 var selectFrom1Mto2M = subContainers[1].querySelector('p:nth-child(3)');
-selectFrom1Mto2M.addEventListener("click",filter1MTo2M);
+selectFrom1Mto2M.addEventListener("click", function() {
+  filterByClass('from1MTo2M', 'typeFilterCost');
+});
 
 // Select cost from 2M to 3M 
 var selectFrom2MTo3M = subContainers[1].querySelector('p:nth-child(4)');
-selectFrom2MTo3M.addEventListener("click",filter2MTo3M);
+selectFrom2MTo3M.addEventListener("click", function() {
+  filterByClass('from2MTo3M', 'typeFilterCost');
+});
+
 
 // Select cost more than 3M 
 var selectMoreThan3M = subContainers[1].querySelector('p:nth-child(5)');
-selectMoreThan3M.addEventListener("click",filterMoreThan3M);
+selectMoreThan3M.addEventListener("click", function() {
+  filterByClass('moreThan3M', 'typeFilterCost');
+});
 
 
 // Select Yonex
 var selectYonex = subContainers[2].querySelector('p:first-child');
-selectYonex.addEventListener("click",filterYonex);
+selectYonex.addEventListener("click", function() {
+  filterByClass('yonex', 'typeFilterBranch');
+});
+
 
 
 // Select Lining
 var selectLining = subContainers[2].querySelector('p:nth-child(2)');
-selectLining.addEventListener("click",filterLining);
+selectLining.addEventListener("click", function() {
+  filterByClass('lining', 'typeFilterBranch');
+});
 
 // Select Victor
 var selectVictor = subContainers[2].querySelector('p:nth-child(3)');
-selectVictor.addEventListener("click",filterVictor);
+selectVictor.addEventListener("click", function() {
+  filterByClass('victor', 'typeFilterBranch');
+});
 
 
 // Select Mizuno
 var selectMizuno = subContainers[2].querySelector('p:nth-child(4)');
-selectMizuno.addEventListener("click",filterMizuno);
+selectMizuno.addEventListener("click", function() {
+  filterByClass('mizuno', 'typeFilterBranch');
+});
 
 // Select VNB
 var selectVNB = subContainers[2].querySelector('p:nth-child(5)');
-selectVNB.addEventListener("click", filterVNB);
+selectVNB.addEventListener("click", function() {
+  filterByClass('vnb', 'typeFilterBranch');
+});
 
+//Lợi dụng sự kiện nổi bọt để xử lý thêm class của cha
+var selectedFilter = document.querySelector('.content');
+
+
+//Select descendent sort 
+var orderLowToHigh = subContainers[3].querySelector('p:first-child');
+orderLowToHigh.addEventListener('click', function()
+{
+    ascendent(itemList);
+});
+
+var orderHighToLow = subContainers[3].querySelector('p:nth-child(2)');
+orderHighToLow.addEventListener('click', function()
+{
+    ascendent(itemList);
+});
+
+
+
+function ascendent(itemList)
+{
+  for(let i=0; i<itemList.length-1; i++)
+  {
+      for(let j=i+1; j<itemList.length; j++)
+      {
+          let costNumberI = parseInt(itemList[i].costItem.replace(/\D/g, ''));     
+          let costNumberJ = parseInt(itemList[j].costItem.replace(/\D/g, ''));     
+          if(costNumberJ < costNumberI)
+          {
+            let temp = itemList[i];
+            itemList[i] = itemList[j];
+            itemList[j] = temp;
+          }
+
+      }
+  }
+}
+
+
+
+function descendant()
+{
+
+}
 
 
 
