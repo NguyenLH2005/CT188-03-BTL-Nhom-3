@@ -705,7 +705,7 @@ orderLowToHigh.addEventListener('click', function()
 var orderHighToLow = subContainers[3].querySelector('p:nth-child(2)');
 orderHighToLow.addEventListener('click', function()
 {
-    ascendent(itemList);
+    decendent(itemList);
 });
 
 
@@ -724,17 +724,81 @@ function ascendent(itemList)
             itemList[i] = itemList[j];
             itemList[j] = temp;
           }
-
       }
+  } 
+  let items = document.querySelectorAll('.content .item');
+  items.forEach(function(element, index)
+    {
+      if(index!==0)
+      {
+      element.remove();
+      }
+    });
+
+
+    for (let i = 0; i < itemList.length; i++) {
+    const clone = item.cloneNode(true);
+    itemList[i].class.split(' ').forEach(cls => clone.classList.add(cls));
+    clone.style.display = "block";
+    clone.querySelector('img').src = itemList[i].img;
+    clone.querySelector('.nameItem').textContent = itemList[i].nameItem;
+    clone.querySelector('.costItem').textContent = itemList[i].costItem;
+    itemContainer.appendChild(clone);
   }
 }
 
 
 
-function descendant()
+function descendent(itemList)
 {
+  for(let i=0; i<itemList.length-1; i++)
+  {
+      for(let j=i+1; j<itemList.length; j++)
+      {
+          let costNumberI = parseInt(itemList[i].costItem.replace(/\D/g, ''));     
+          let costNumberJ = parseInt(itemList[j].costItem.replace(/\D/g, ''));     
+          if(costNumberJ > costNumberI)
+          {
+            let temp = itemList[i];
+            itemList[i] = itemList[j];
+            itemList[j] = temp;
+          }
+      }
+  } 
+  let items = document.querySelectorAll('.content .item');
+  items.forEach(function(element, index)
+    {
+      if(index!==0)
+      {
+      element.remove();
+      }
+    });
 
+
+    for (let i = 0; i < itemList.length; i++) {
+    const clone = item.cloneNode(true);
+    itemList[i].class.split(' ').forEach(cls => clone.classList.add(cls));
+    clone.style.display = "block";
+    clone.querySelector('img').src = itemList[i].img;
+    clone.querySelector('.nameItem').textContent = itemList[i].nameItem;
+    clone.querySelector('.costItem').textContent = itemList[i].costItem;
+    itemContainer.appendChild(clone);
+  }
 }
+
+
+
+var heart = document.querySelectorAll('.item__iconHeart');
+heart.forEach(function(element, index)
+{
+  element.addEventListener('click', function(event)
+  {
+      event.stopPropagation();
+      element.classList.toggle('clicked__iconHeart')
+  });
+});
+
+
 
 
 

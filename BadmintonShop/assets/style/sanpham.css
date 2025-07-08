@@ -205,3 +205,19 @@ main {
     font-size: 25px;
     margin-right: 5px;
 }
+
+
+.item__iconHeart{
+    color: #ccc;
+    font-size: 24px;
+}
+
+.item__iconHeart:hover
+{
+    color: rgb(173, 59, 59);
+}
+
+.clicked__iconHeart{
+    color:red;
+    font-size: 24px;
+}
