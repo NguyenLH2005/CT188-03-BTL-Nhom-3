@@ -75,7 +75,11 @@ main {
 
 .sidebar__filter__container {
     display: flex;
+}
 
+.sidebar__filter__container i
+{
+    padding: 4px;
 }
 
 .sidebar__filter__subContaniner {

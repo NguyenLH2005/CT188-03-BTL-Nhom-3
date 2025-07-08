@@ -234,6 +234,16 @@ function filterAll()
   {
       all[i].style.display = 'block';
   }
+
+  let arrayClass = [...itemContainer.classList];
+  for(let i=0; i < arrayClass.length; i++)
+  {
+    if(arrayClass[i]!='content')
+    {
+        itemContainer.classList.remove(arrayClass[i]);
+    }
+  }
+  
 }
 
 // Hàm filter chung cho từng loại
@@ -705,7 +715,7 @@ orderLowToHigh.addEventListener('click', function()
 var orderHighToLow = subContainers[3].querySelector('p:nth-child(2)');
 orderHighToLow.addEventListener('click', function()
 {
-    decendent(itemList);
+    descendent(itemList);
 });
 
 
@@ -731,7 +741,7 @@ function ascendent(itemList)
     {
       if(index!==0)
       {
-      element.remove();
+        element.remove();
       }
     });
 
@@ -789,14 +799,31 @@ function descendent(itemList)
 
 
 var heart = document.querySelectorAll('.item__iconHeart');
-heart.forEach(function(element, index)
-{
+heart.forEach( function(element, index) {
+  const isClicked = localStorage.getItem(index);
+  if (isClicked === 'true') 
+  {
+    element.classList.add('clicked__iconHeart');
+  }
+
   element.addEventListener('click', function(event)
   {
       event.stopPropagation();
       element.classList.toggle('clicked__iconHeart')
+      let clicked = element.classList.contains('clicked__iconHeart');
+      if(clicked.toString() ==='true')
+      {
+        localStorage.setItem(index, true);
+      }
+      else
+      {
+        localStorage.setItem(index, false);
+      }
   });
+
+  
 });
+
 
 
 
