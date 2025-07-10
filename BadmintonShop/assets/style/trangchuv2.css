@@ -173,6 +173,7 @@ body {
 
 .page-header__tool-item:hover {
     color: #8ec5fc;
+    cursor: pointer;
 }
 
 .page-header__tool-item>i {
@@ -256,7 +257,7 @@ body {
 }
 
 .page-footer--top__block {
-    width: 20%;
+    width: 22%;
 }
 
 .page-footer--top__block p {
@@ -269,6 +270,7 @@ body {
 .page-footer--top__block ul {
     font-weight: 600;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 .ul-nodclr {
