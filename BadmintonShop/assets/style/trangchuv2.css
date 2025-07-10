@@ -27,10 +27,6 @@ body {
 
 /* HEADER */
 
-header {
-    border: solid 2px;
-}
-
 .page-header {
     grid-area: header;
     width: 100%;
@@ -38,14 +34,16 @@ header {
     flex-direction: column;
     align-items: center;
     /* background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); */
-    border-bottom: 2px solid #b6c0c5;
+    /* border-bottom: 2px solid #b6c0c5; */
     box-shadow: 0 4px 16px rgba(148, 187, 233, 0.15);
     /* border-radius: 0 0 18px 18px; */
     /* background: linear-gradient(to right, #00b3a4, #00b3a4); */
     /* background-image: url(./images/anhtrangchu/background.jpg); */
     /* background-color: rgba(37, 193, 143, 0.516); */
     /* background-color: #BEFFF7; */
-    background-color: #014034;
+    background-color: #ff6b35;
+    /* background-color: #093FB4; */
+    /* background-color: #014034; */
     /* margin-bottom: 10px; */
 }
 
@@ -92,6 +90,11 @@ header {
     border-radius: 8px;
     padding: 6px 16px;
     box-shadow: 0 1px 4px rgba(231, 76, 60, 0.07);
+}
+
+.page-header__hotline i
+{
+    margin-right: 10px;
 }
 
 .page-header__hotline a {
@@ -195,7 +198,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #9EBAFE, #B6C0C5);
+    background-color: #f7c59f;
+    /* background: linear-gradient(to right, #9EBAFE, #B6C0C5); */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(148, 187, 233, 0.08);
     margin-bottom: 10px;
@@ -308,3 +312,5 @@ header {
 .page-footer--bottom img{
     padding-top: 5px;
 }
+
+

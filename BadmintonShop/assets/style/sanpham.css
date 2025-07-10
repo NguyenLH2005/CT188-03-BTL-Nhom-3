@@ -38,7 +38,8 @@ main {
     gap: 20px;
     /* justify-content: flex-start; */
     height: 60px;
-    background-color: #DFF0EA;
+    /* background-color: #DFF0EA; */
+    background-color: #efefd0;
 }
 
 .sidebar:first-child {
@@ -133,7 +134,8 @@ main {
     padding: 0px 20px;
     /* background-color: #A6F6FF; */
     /* background-color: #f5f5f5; */
-    background: linear-gradient(to bottom, #ffffff, #e6f2ed);
+    background-color: #BDDDE4;
+    /* background: linear-gradient(to bottom, #ffffff, #e6f2ed); */
     align-items: flex-start;
 }
 
@@ -172,7 +174,7 @@ main {
     width: calc(100% - 24px);
     /* Giảm chiều rộng để chừa khoảng trống hai bên */
     background-color: #B7D6CD;
-    margin: 0 12px 0px 12px;
+    margin: 0 12px 12px 12px;
     /* Cách trái phải 12px, dưới 8px */
     border-radius: 10px;
     /* Bo tròn cho đẹp hơn */
@@ -181,11 +183,16 @@ main {
     font-weight: 600;
 }
 
+.item .descriptionItem .nameItem
+{
+    padding: 0px 8px;
+}
+
 .item .costItem {
     text-align: center;
     color: red;
     padding: 8px 8px;
-    background-color: #ebe8e8;
+    /* background-color: #ebe8e8; */
     display: inline-block;
     align-items: center;
     font-weight: bold;
