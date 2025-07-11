@@ -61,6 +61,7 @@
             <h2>Bạn có đang ở gần cửa hàng VNB của chúng tôi <i class="fa-solid fa-robot"></i><i
                     class="fa-solid fa-question"></i></h2>
             <button type="button" onclick="init()">Cho phép kiểm tra ngay với camera</button>
+            <button class="breakProcess" type="button" onclick="breakProcess();">Dừng kiểm tra</button>
             <div id="webcam-container"></div>
             <div id="label-container"></div>
         </div>
@@ -69,6 +70,13 @@
     <script
         src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script type="text/javascript">
+
+        function breakProcess() {
+            let x = document.querySelector('.breakProcess');
+            x.addEventListener('click', function (evt) {
+                location.reload();
+            });
+        }
         // More API functions here:
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
@@ -120,6 +128,7 @@
                 labelContainer.childNodes[i].innerHTML = classPrediction;
             }
         }
+
     </script>
 
 
