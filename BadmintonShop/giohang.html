@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <header class="page-header">
+    <!-- <header class="page-header">
         <div class="page-header-container">
             <div class="page-header__logo">
                 <a href="trangchu.html">
@@ -54,7 +54,7 @@
             <a class="page-header-navbar__link" href="#">Đăng ký</a>
             <a class="page-header-navbar__link" href="thigiacmaytinh.html"><i class="fa-solid fa-camera"></i></a>
         </nav>
-    </header>
+    </header> -->
 
     <main class="page-main">
         <table class="page-main__shoppingCart">
@@ -65,7 +65,7 @@
                             <i class="fa-solid fa-cart-shopping"></i>
                         </div>
                     </td>
-                    <td class="page-main__shoppingCart_slogan" colspan="2">Uy tín tạo nên thương hiệu</td>
+                    <td class="page-main__shoppingCart__slogan" colspan="2">Uy tín tạo nên thương hiệu</td>
                     <td colspan="2" class="page-main__shoppingCart_logo">
                         <img src="./assets/images/anhtrangchu/logo.jpg" alt="">
                     </td>
@@ -82,12 +82,22 @@
             <tbody>
                 <tr>
                     <td class="emptyCart blink" colspan="6">Giỏ hàng của bạn hiện đang trống !!!</td>
+                    <!-- '<tr class="page-main__shoppingCart__item">'+
+                        '<td>'+ (index + 1) +'</td>'+
+                        '<td>'+
+                            '<img src="'+item.imageItem+'" alt="">'+
+                        '</td>'+
+                        '<td>'+item.nameItem+'</td>'+
+                        '<td>'+'<input type="number" min="1" value="'+item.quantity+'">'+'</td>'+
+                        '<td>'+item.priceItem+'<sup>đ</sup></td>'+
+                        '<td><i class="fa-solid fa-trash"></i></td>'+
+                    '</tr>'; -->
                 </tr>
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="5">Tổng tiền</td>
-                    <td class="page-main__shoppingCart_total">0<sup>đ</sup></td>
+                    <td colspan="4">Tổng tiền</td>
+                    <td colspan="2" class="page-main__shoppingCart_total">0<sup>đ</sup></td>
                 </tr>
                 <tr>
                     <td class="page-main__shoppingCart__order" colspan="6">
@@ -98,7 +108,7 @@
         </table>
     </main>
 
-    <footer class="page-footer">
+    <!-- <footer class="page-footer">
         <div class="page-footer--top">
             <div class="page-footer--top__block">
                 <p>Thông tin chung</p>
@@ -159,7 +169,7 @@
             <p>GĐ/Sở hữu website: Nguyễn Phùng Hà Lan</p>
             <img src="./assets/images/anhtrangchu/bct.webp" alt="chung nhan">
         </div>
-    </footer>
+    </footer> -->
 
     <script src="./assets/js/giohang.js"></script>
     <script>

@@ -134,8 +134,17 @@ function deleteCart() {
         element.addEventListener('click', function (evt) {
             customerCart.splice(index,1);
             localStorage.setItem('cartItems',JSON.stringify(customerCart));
+            location.reload();
         });
     });
+
+    if(customerCart.length == 0)
+    {
+        let restore = document.querySelector('tbody');
+        let emptyContent = '<td class="emptyCart blink" colspan="6">Giỏ hàng của bạn hiện đang trống !!!</td>';
+        restore.innerHTML = emptyContent;
+    }
+
 }
 
 
