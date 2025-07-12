@@ -1,15 +1,21 @@
+.page-header {
+  padding: 0px 0px 226px 0px;
+}
+
 .account-page {
+  /* margin-top: 20px; */
   grid-area: main;
   display: flex;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
   padding: 40px 20px;
   width: 100%;
-  max-width: 1200px;   /* đủ rộng để 2 khối nằm ngang */
-  margin: 0 auto;      /* căn giữa khung */
+  max-width: 1200px; /* đủ rộng để 2 khối nằm ngang */
+  margin: 0 auto; /* căn giữa khung */
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .account-page__left {
@@ -17,8 +23,8 @@
   padding: 30px 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  flex: 0 0 350px; 
-  max-width: 350px;      
+  flex: 0 0 350px;
+  max-width: 350px;
 }
 
 .account-page__right {
@@ -26,8 +32,8 @@
   padding: 30px 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  flex: 1 1 750px;      
-  min-width: 650px;     
+  flex: 1 1 750px;
+  min-width: 650px;
   overflow-x: auto;
 }
 
@@ -96,7 +102,6 @@
   margin-right: 8px;
 }
 
-
 /* Bảng đơn hàng */
 .order-table {
   width: 100%;
@@ -122,21 +127,21 @@
 }
 
 .order-table th:nth-child(1) {
-  min-width: 80px;   /* Đơn hàng */
+  min-width: 80px; /* Đơn hàng */
 }
 
 .order-table th:nth-child(2) {
-  min-width: 100px;  /* Ngày */
+  min-width: 100px; /* Ngày */
 }
 
 .order-table th:nth-child(3) {
-  min-width: 180px;  /* Địa chỉ */
+  min-width: 180px; /* Địa chỉ */
 }
 
 .order-table th:nth-child(4) {
-  min-width: 80px;   /* Giá trị */
+  min-width: 80px; /* Giá trị */
 }
 
 .order-table th:nth-child(5) {
-  min-width: 100px;  /* Tình trạng */
+  min-width: 100px; /* Tình trạng */
 }

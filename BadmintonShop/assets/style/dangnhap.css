@@ -91,16 +91,16 @@
   }
 } */
 
-
 .login-page {
   display: flex;
   min-height: 70vh;
-  background-color:#d9e1e4;
-  align-items:center;
+  background-color: #d9e1e4;
+  align-items: center;
   justify-content: center;
 }
 
 .login-container {
+  margin-top: 20px;
   width: 100%;
   max-width: 500px;
   padding: 30px;
@@ -157,10 +157,10 @@
   border-radius: 10px;
   font-size: 18px;
 }
-.login-form button{
+.login-form button {
   background: rgb(15, 80, 77);
 }
- 
+
 button:hover {
   transform: scale(1.02); /* phóng to nhẹ */
   transition: all 0.3s ease; /* hiệu ứng mượt */
@@ -169,14 +169,14 @@ button:hover {
 .remember-me {
   display: inline-flex;
   align-items: center;
-  gap: 4px;             /* Giảm khoảng cách giữa checkbox và chữ */
+  gap: 4px; /* Giảm khoảng cách giữa checkbox và chữ */
   font-size: 18px;
   white-space: nowrap;
   padding: 0;
   margin: 0;
 }
 .remember-me input[type="checkbox"] {
-  margin: 0;            /* Xóa margin mặc định của checkbox */
+  margin: 0; /* Xóa margin mặc định của checkbox */
 }
 
 .login-form-options {
@@ -187,7 +187,7 @@ button:hover {
   font-size: 18px;
 }
 
-.social-login{
+.social-login {
   text-align: center;
   padding: 15px;
   font-size: 18px;
@@ -225,8 +225,13 @@ button:hover {
 
 /* Phần cuối */
 
-.login-footer{
-    text-align: center;
-    font-size: 18px;
+.login-footer {
+  text-align: center;
+  font-size: 18px;
 }
 
+@media only screen and (max-width: 767px) {
+  .login-container {
+    margin: 20px 20px !important;
+  }
+}

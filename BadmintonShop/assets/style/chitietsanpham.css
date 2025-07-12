@@ -12,7 +12,7 @@
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  background: rgb(214, 209, 201);
+  background: #c1f3e1;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
