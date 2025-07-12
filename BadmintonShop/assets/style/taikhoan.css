@@ -1,7 +1,7 @@
 .account-page {
   grid-area: main;
   display: flex;
-  flex-wrap: nowrap; /* ❗ Quan trọng: không cho rớt dòng */
+  flex-wrap: nowrap; 
   justify-content: center;
   align-items: flex-start;
   gap: 40px;
@@ -12,29 +12,24 @@
   box-sizing: border-box;
 }
 
-
 .account-page__left {
   background: #ffffff;
   padding: 30px 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  flex: 0 0 350px; /* nhỏ hơn nữa để nhường chỗ */
+  flex: 0 0 350px; 
   max-width: 350px;      
 }
-
 
 .account-page__right {
   background: #ffffff;
   padding: 30px 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  flex: 1 1 750px;       /* rộng hơn tí */
-  min-width: 650px;      /* đảm bảo bảng hiển thị ổn */
+  flex: 1 1 750px;      
+  min-width: 650px;     
   overflow-x: auto;
 }
-
-
-
 
 .account-title {
   font-size: 24px;
@@ -78,8 +73,11 @@
 
 /* Nút sửa */
 .account-info__edit-button {
-  margin-top: 20px;
-  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
   font-size: 15px;
   font-weight: bold;
   background-color: rgb(15, 80, 77);
@@ -93,6 +91,11 @@
 .account-info__edit-button:hover {
   background-color: rgb(4, 44, 42);
 }
+
+.account-info__edit-button i {
+  margin-right: 8px;
+}
+
 
 /* Bảng đơn hàng */
 .order-table {
@@ -137,6 +140,3 @@
 .order-table th:nth-child(5) {
   min-width: 100px;  /* Tình trạng */
 }
-
-
-
