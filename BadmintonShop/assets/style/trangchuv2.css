@@ -17,15 +17,19 @@ body {
 .home {
     display: grid;
     grid-template-rows: 210px auto 700px;
-    grid-template-columns: 100%;
+    grid-template-columns: 20% 60% 20%;
     grid-template-areas:
-        "header"
-        "main"
-        "footer";
+        "header header header"
+        "left main right"
+        "footer footer footer";
     min-height: 100vh;
 }
 
 /* HEADER */
+
+header {
+    border: solid 2px;
+}
 
 .page-header {
     grid-area: header;
@@ -33,19 +37,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); */
+    border-bottom: 2px solid #b6c0c5;
     box-shadow: 0 4px 16px rgba(148, 187, 233, 0.15);
-    background-color: #ff6b35;
+    /* border-radius: 0 0 18px 18px; */
+    /* background: linear-gradient(to right, #00b3a4, #00b3a4); */
+    /* background-image: url(./images/anhtrangchu/background.jpg); */
+    /* background-color: rgba(37, 193, 143, 0.516); */
+    /* background-color: #BEFFF7; */
+    background-color: #014034;
+    /* margin-bottom: 10px; */
 }
 
 .page-header-container {
-    width: 100%;
+    width: 95%;
     margin-top: 18px;
     margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: rgba(255, 255, 255, 0.7);
-    /* border-radius: 12px; */
+    border-radius: 12px;
     box-shadow: 0 2px 8px rgba(148, 187, 233, 0.08);
     padding: 10px 24px;
 }
@@ -80,11 +92,6 @@ body {
     border-radius: 8px;
     padding: 6px 16px;
     box-shadow: 0 1px 4px rgba(231, 76, 60, 0.07);
-}
-
-.page-header__hotline i
-{
-    margin-right: 10px;
 }
 
 .page-header__hotline a {
@@ -163,7 +170,6 @@ body {
 
 .page-header__tool-item:hover {
     color: #8ec5fc;
-    cursor: pointer;
 }
 
 .page-header__tool-item>i {
@@ -182,13 +188,15 @@ body {
 }
 
 .page-header-navbar {
+    /* margin-top: 20px; */
     min-height: 60px;
-    width: 100%;
+    width: 95%;
+    /* margin-bottom: 10px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f7c59f;
-    /* border-radius: 8px; */
+    background: linear-gradient(to right, #9EBAFE, #B6C0C5);
+    border-radius: 8px;
     box-shadow: 0 2px 8px rgba(148, 187, 233, 0.08);
     margin-bottom: 10px;
 }
@@ -214,88 +222,6 @@ body {
     padding-bottom: 10px;
 }
 
-/* ----------- Responsive: 768px đến 1024px ----------- */
-@media (max-width: 1024px) and (min-width: 768px) {
-  /* Ẩn phần hotline */
-  .page-header__hotline {
-    display: none; /* ✅ Đã được ẩn khi ở tablet */
-  }
-
-  /* Ẩn bớt các mục navbar và thêm mục "Xem thêm" */
-  .page-header-navbar__link:nth-child(5) {
-    display: none; /* ✅ Ẩn mục từ thứ 4 trở đi */
-  }
-
-  .page-header-navbar::after {
-    content: "Xem thêm ▼"; /* ✅ Thêm mục Xem thêm */
-    font-size: 20px;
-    font-weight: 500;
-    color: #222;
-    cursor: pointer;
-  }
-
-  /* Tạo dropdown đơn giản khi click vào Xem thêm */
-  .page-header-navbar:hover .page-header-navbar__link:nth-child(n+4) {
-    display: block; /* ✅ Hiện lại khi hover */
-    position: absolute;
-    top: 100%;
-    background: white;
-    padding: 10px 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    z-index: 99;
-  }
-
-  .page-header-navbar {
-    position: relative; /* ✅ Cần để định vị dropdown */
-  }
-}
-
-@media (max-width: 768px) {
-  /* Chuyển thanh tìm kiếm xuống thanh nav */
-  .page-header__search {
-    order: 2; /* ✅ Đưa xuống dưới nav */
-    width: 95%;
-    margin-top: 10px;
-  }
-
-  /* Ẩn toàn bộ thanh nav và thay bằng icon menu */
-  .page-header-navbar {
-    display: none; /* ✅ Ẩn toàn bộ navbar cũ */
-  }
-
-  .menu-toggle {
-    display: block; /* ✅ Hiện icon menu */
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-  }
-
-  /* Menu xổ dọc */
-  .mobile-nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    z-index: 100;
-  }
-
-  .mobile-nav a {
-    padding: 14px;
-    border-bottom: 1px solid #ddd;
-    text-decoration: none;
-    color: #222;
-    font-weight: 500;
-  }
-
-  /* ✅ Toggle menu khi nhấn icon */
-  .mobile-nav.open {
-    display: flex;
-  }
-}
 /* FOOTER */
 .page-footer {
     grid-area: footer;
@@ -326,7 +252,7 @@ body {
 }
 
 .page-footer--top__block {
-    width: 22%;
+    width: 20%;
 }
 
 .page-footer--top__block p {
@@ -339,7 +265,6 @@ body {
 .page-footer--top__block ul {
     font-weight: 600;
     margin-bottom: 15px;
-    text-align: justify;
 }
 
 .ul-nodclr {
@@ -382,94 +307,4 @@ body {
 
 .page-footer--bottom img{
     padding-top: 5px;
-}
-
-/* MAIN **************************************/
-.page-main {
-    grid-area: main;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.page-main__slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.page-main__slider--slides {
-    position: relative;
-    height: 500px;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.page-main__slider--dots {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    background: #888;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: #fff;
-    transform: scale(1.5);
-}
-
-.page-main__slider--prev, .page-main__slider--next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.5);
-    border: none;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.page-main__slider--prev:hover, .page-main__slider--next:hover {
-    background: rgba(255,255,255,0.8);
-}
-
-.page-main__slider--prev {
-    left: 15px;
-}
-
-.page-main__slider--next {
-    right: 15px;
-}
-
-.page-main__content {
-    width: 80%;
-}
-
-.page-main-content--commitments {
-
 }
