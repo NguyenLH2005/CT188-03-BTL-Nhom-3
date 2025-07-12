@@ -99,8 +99,7 @@
   background-color: tomato;
 }
 
-.add-cart:hover
-{
-    color: #fff;
-    background-color: #cc3e00;
+.add-cart:hover {
+  color: #fff;
+  background-color: #cc3e00;
 }
