@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Đăng Nhập</title>
+    <title>Đăng Kí</title>
     <link rel="stylesheet" href="/assets/style/trangchuv2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/style/dangnhap.css">
-    <link rel="stylesheet" href="./assets/style/trangchuv2.css">
+    <link rel="stylesheet" href="/assets/style/dangki.css">
 </head>
-
 <body>
     <header class="page-header">
         <div class="page-header-container">
@@ -44,12 +40,12 @@
             </div>
         </div>
         <nav class="page-header-navbar">
-            <a class="page-header-navbar__link" href="trangchu.html">Trang chủ</a>
-            <a class="page-header-navbar__link" href="sanpham.html">Sản phẩm</a>
-            <a class="page-header-navbar__link" href="tintuc.html">Tin tức</a>
-            <a class="page-header-navbar__link" href="gioithieu">Giới thiệu</a>
-            <a class="page-header-navbar__link" href="dangnhap.html">Đăng nhập</a>
-            <a class="page-header-navbar__link" href="dangki.html">Đăng ký</a>
+            <a class="page-header-navbar__link" href="#">Trang chủ</a>
+            <a class="page-header-navbar__link" href="#">Sản phẩm</a>
+            <a class="page-header-navbar__link" href="#">Tin tức</a>
+            <a class="page-header-navbar__link" href="#">Giới thiệu</a>
+            <a class="page-header-navbar__link" href="#">Đăng nhập</a>
+            <a class="page-header-navbar__link" href="#">Đăng ký</a>
         </nav>
     </header>
     <main class="login-page">
@@ -68,31 +64,26 @@
                     <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
                 </div>
                 <div class="login-form-group">
-                    <input type="password" id="confirm-password" name="confirm_password" placeholder="Nhập lại mật khẩu"
-                        required>
+                    <input type="password" id="password" name="password" placeholder="Nhập lại mật khẩu" required>
                 </div>
-
+                
                 <button type="submit" class="login-button">Đăng kí</button>
             </form>
 
             <div class="social-login">
                 <p>Hoặc đăng kí bằng</p>
-                <button type="button" class="social-btn facebook-btn"
-                    onclick="alert('Tính năng đang phát triển. Vui lòng thử lại sau!')">
-                    <i class="fa-brands fa-facebook-f"></i> Đăng nhập với Facebook
+                <button type="button" class="social-btn facebook-btn" onclick="alert('Tính năng đang phát triển. Vui lòng thử lại sau!')">
+                    <i class="fa-brands fa-facebook-f"></i> Đăng nhập với Facebook 
                 </button>
-                <button type="buton" class="social-btn google-btn"
-                    onclick="alert('Tính năng đang phát triển. Vui lòng thử lại sau!')">
+                <button type="buton" class="social-btn google-btn" onclick="alert('Tính năng đang phát triển. Vui lòng thử lại sau!')">
                     <i class="fa-brands fa-google"></i> Đăng nhập với Google
                 </button>
             </div>
             <div class="login-footer">
                 <p>Bạn đã có tài khoản?
-                    <a href="dangnhap.html"> Đăng nhập</a>
-                </p>
+                    <a href="dangnhap.html"> Đăng nhập</a></p> 
             </div>
         </section>
     </main>
 </body>
-
 </html>
