@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <nav class="page-header-navbar">
+        <nav class="page-header-navbar" id="mobileNav">
             <a class="page-header-navbar__link" href="#">Trang chủ</a>
             <a class="page-header-navbar__link" href="#">Sản phẩm</a>
             <a class="page-header-navbar__link" href="#">Tin tức</a>
@@ -49,7 +49,36 @@
             <a class="page-header-navbar__link" href="#">Đăng ký</a>
         </nav>
     </header>
-    <main></main>
+    <main class="page-main">
+        <div class="page-main__slider">
+            <div class="page-main__slider--slides">
+                <img src="./assets/images/anhtrangchu/slider1.webp" class="slide active" alt="Ảnh 1">
+                <img src="./assets/images/anhtrangchu/slider2.webp" class="slide" alt="Ảnh 2">
+                <img src="./assets/images/anhtrangchu/slider3.webp" class="slide" alt="Ảnh 3">
+                <img src="./assets/images/anhtrangchu/slider4.webp" class="slide" alt="Ảnh 4">
+                <img src="./assets/images/anhtrangchu/slider5.webp" class="slide" alt="Ảnh 5">
+                <img src="./assets/images/anhtrangchu/slider6.webp" class="slide" alt="Ảnh 6">
+            </div>
+            <div class="page-main__slider--dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <button class="page-main__slider--prev">&#10094;</button>
+            <button class="page-main__slider--next">&#10095;</button>
+        </div>
+        <div class="page-main__content">
+            <div class="page-main__content--commitments">
+                <div>Giao hàng toàn quốc</div>
+                <div>Cam kết chất lượng</div>
+                <div>Thanh toán đa dạng</div>
+                <div>Đổi trả sản phẩm lỗi</div>
+            </div>
+        </div>
+    </main>
     <footer class="page-footer">
         <div class="page-footer--top">
             <div class="page-footer--top__block">
@@ -109,6 +138,7 @@
             <img src="./assets/images/anhtrangchu/bct.webp" alt="chung nhan">
         </div>
     </footer>
+    <script src="./assets/js/trangchu.js"></script>
 </body>
 
 </html>
