@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,18 +24,22 @@
             </div>
             <form action="#" class="page-header__search">
                 <input type="text" class="page-header__search--input" placeholder="Nhập từ khóa...">
-                <button onclick="search()" class="page-header__search--button">
+                <button class="page-header__search--button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
             <div class="page-header__tool">
+                <div class="page-header__tool-item hotline">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>HOTLINE</p>
+                </div>
                 <div class="page-header__tool-item">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    GIỎ HÀNG
+                    <p>GIỎ HÀNG</p>
                 </div>
                 <div class="page-header__tool-item">
                     <i class="fa-solid fa-user"></i>
-                    TÀI KHOẢN
+                    <p>TÀI KHOẢN</p>
                 </div>
             </div>
         </div>
@@ -45,11 +48,68 @@
             <a class="page-header-navbar__link" href="sanpham.html">Sản phẩm</a>
             <a class="page-header-navbar__link" href="tintuc.html">Tin tức</a>
             <a class="page-header-navbar__link" href="gioithieu">Giới thiệu</a>
+            <a class="page-header-navbar__link" href="lienhe.html">Liên hệ</a>
             <a class="page-header-navbar__link" href="dangnhap.html">Đăng nhập</a>
             <a class="page-header-navbar__link" href="dangki.html">Đăng ký</a>
+            <span class="page-header-navbar__read-more">Xem Thêm</span>
+            <div class="read-more-submenu" id="readMoreSubmenu">
+                <a href="gioithieu.html">Giới thiệu</a>
+                <a href="lienhe.html">Liên hệ</a>
+                <a href="dangnhap.html">Đăng nhập</a>
+                <a href="dangki.html">Đăng ký</a>
+            </div>
+            <form action="#" class="page-header__search">
+                <input type="text" class="page-header__search--input" placeholder="Nhập từ khóa...">
+                <button class="page-header__search--button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="menu-wrapper">
+                <div class="menu-icon" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <ul id="menuItems">
+                        <li><a href="trangchu.html">Trang chủ</a></li>
+                        <li><a href="sanpham.html">Sản phẩm</a></li>
+                        <li><a href="tintuc.html">Tin tức</a></li>
+                        <li><a href="gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="lienhe.html">Liên hệ</a></li>
+                        <li><a href="dangnhap.html">Đăng nhập</a></li>
+                        <li><a href="dangki.html">Đăng kí</a></li>
+                    </ul>
+                </div>
+        </div>
         </nav>
     </header>
-    <main></main>
+    <main class="page-main">
+        <div class="page-main__slider">
+            <div class="page-main__slider--slides">
+                <img src="./assets/images/anhtrangchu/slider1.webp" class="slide active" alt="Ảnh 1">
+                <img src="./assets/images/anhtrangchu/slider2.webp" class="slide" alt="Ảnh 2">
+                <img src="./assets/images/anhtrangchu/slider3.webp" class="slide" alt="Ảnh 3">
+                <img src="./assets/images/anhtrangchu/slider4.webp" class="slide" alt="Ảnh 4">
+                <img src="./assets/images/anhtrangchu/slider5.webp" class="slide" alt="Ảnh 5">
+                <img src="./assets/images/anhtrangchu/slider6.webp" class="slide" alt="Ảnh 6">
+            </div>
+            <div class="page-main__slider--dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <button class="page-main__slider--prev">&#10094;</button>
+            <button class="page-main__slider--next">&#10095;</button>
+        </div>
+        <div class="page-main__content">
+            <div class="page-main__content--commitments">
+                <div>Giao hàng toàn quốc</div>
+                <div>Cam kết chất lượng</div>
+                <div>Thanh toán đa dạng</div>
+                <div>Đổi trả sản phẩm lỗi</div>
+            </div>
+        </div>
+    </main>
     <footer class="page-footer">
         <div class="page-footer--top">
             <div class="page-footer--top__block">
@@ -84,7 +144,7 @@
                     <li><a href="#">Chính sách xử lý khiếu nại</a></li>
                     <li><a href="#">Chính sách vận chuyển</a></li>
                     <li><a href="#">Điều khoản sử dụng</a></li>
-                    <li><a href="#">Chính Sách Bảo Mật Thông Ti</a></li>
+                    <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
                     <li><a href="#">Chính sách nhượng quyền</a></li>
                 </ul>
             </div>
@@ -109,6 +169,6 @@
             <img src="./assets/images/anhtrangchu/bct.webp" alt="chung nhan">
         </div>
     </footer>
+    <script src="./assets/js/trangchu.js"></script>
 </body>
 
-</html>
