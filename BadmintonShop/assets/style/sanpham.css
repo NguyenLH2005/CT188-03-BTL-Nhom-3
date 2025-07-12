@@ -24,7 +24,6 @@ main {
   /* margin-top: 10px; */
   /* border-radius: 12px; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  /* background-color: #A6F6FF; */
 }
 
 /* CSS sidebar */
@@ -36,7 +35,8 @@ main {
   /* justify-content: flex-start; */
   min-height: 60px;
   /* background-color: #DFF0EA; */
-  background-color: #efefd0;
+  /* background-color: #efefd0; */
+  background-color: #fff5e4;
   flex-wrap: wrap;
 }
 
@@ -70,6 +70,29 @@ main {
   display: flex;
 }
 
+.sidebar__filter__container .sidebar__filter {
+  display: flex;
+}
+
+.sidebar .sidebar__filter:nth-child(1) {
+}
+
+.sidebar .sidebar__filter:nth-child(2) {
+  display: none;
+}
+
+.sidebar .sidebar__filter:nth-child(3) {
+  display: none;
+}
+
+.sidebar .sidebar__filter:nth-child(4) {
+  display: none;
+}
+
+.sidebar .sidebar__filter:nth-child(5) {
+  display: none;
+}
+
 .sidebar__filter__container i {
   padding: 4px;
 }
@@ -86,6 +109,10 @@ main {
   color: #014034;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+}
+
+.add_filter_for_moblie {
+  width: 200%;
 }
 
 .sidebar__filter:hover .sidebar__filter__subContaniner {
@@ -116,7 +143,7 @@ main {
   padding: 0px 20px;
   /* background-color: #A6F6FF; */
   /* background-color: #f5f5f5; */
-  background-color: #bddde4;
+  background-color: #c1d8c3;
   /* background: linear-gradient(to bottom, #ffffff, #e6f2ed); */
   align-items: flex-start;
 }
@@ -268,6 +295,14 @@ main {
     width: 100%;
     text-align: center;
   }
+
+  .sidebar .sidebar__filter:nth-child(2) {
+    display: block;
+  }
+
+  .sidebar .sidebar__filter:nth-child(3) {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1030px) {
@@ -306,6 +341,25 @@ main {
     justify-content: center;
     align-items: center;
   }
+
+  .sidebar .sidebar__filter:nth-child(2) {
+    display: block;
+  }
+
+  .sidebar .sidebar__filter:nth-child(3) {
+    display: block;
+  }
+
+  .sidebar .sidebar__filter:nth-child(4) {
+    display: block;
+  }
+
+  .sidebar .sidebar__filter:nth-child(5) {
+    display: block;
+  }
+  .sidebar .sidebar__filter:nth-child(6) {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1031px) {
@@ -343,5 +397,24 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .sidebar .sidebar__filter:nth-child(2) {
+    display: block;
+  }
+
+  .sidebar .sidebar__filter:nth-child(3) {
+    display: block;
+  }
+
+  .sidebar .sidebar__filter:nth-child(4) {
+    display: block;
+  }
+
+  .sidebar .sidebar__filter:nth-child(5) {
+    display: block;
+  }
+  .sidebar .sidebar__filter:nth-child(6) {
+    display: none;
   }
 }

@@ -118,6 +118,32 @@
                 </div>
             </div>
 
+            <div class="sidebar__filter sidebar__filter--sort">
+                <div class="sidebar__filter__container sidebar__filter--sort__type">
+                    <p>XEM THÊM</p>
+                    <i class="fa-solid fa-sort"></i>
+                </div>
+                <div class="sidebar__filter__subContaniner add_filter_for_moblie">
+                    <p>Vợt</p>
+                    <p>Giày</p>
+                    <p>Áo</p>
+                    <p>Váy</p>
+                    <p>Quần</p>
+                    <p>Giá dưới 500.000đ</p>
+                    <p>500.000đ - 1 triệu</p>
+                    <p>1 - 2 triệu</p>
+                    <p>2 - 3 triệu</p>
+                    <p>Giá trên 3 triệu</p>
+                    <p>Yonex</p>
+                    <p>Lining</p>
+                    <p>Victor</p>
+                    <p>Mizuno</p>
+                    <p>VNB</p>
+                    <p>Giá tiền từ cao đến thấp</p>
+                    <p>Giá tiền từ thấp đến cao</p>
+                </div>
+            </div>
+
 
 
         </section>
@@ -150,7 +176,7 @@
     </main>
 
 
-    <footer class="page-footer">
+    <!-- <footer class="page-footer">
         <div class="page-footer--top">
             <div class="page-footer--top__block">
                 <p>Thông tin chung</p>
@@ -211,9 +237,29 @@
             <p>GĐ/Sở hữu website: Nguyễn Phùng Hà Lan</p>
             <img src="./assets/images/anhtrangchu/bct.webp" alt="chung nhan">
         </div>
-    </footer>
+    </footer> -->
     <script src="./assets/js/sanpham.js"></script>
     <script src="./assets/js/giohang.js">
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = document.querySelectorAll(".item");
+
+            items.forEach((item) => {
+                item.addEventListener("click", function () {
+                    const product = {
+                        id: item.querySelector(".idItem").textContent,
+                        name: item.querySelector(".nameItem").textContent,
+                        image: item.querySelector("img").getAttribute("src"),
+                        price: item.querySelector(".costItem").textContent.trim()
+                    };
+                    localStorage.setItem("selectedProduct", JSON.stringify(product));
+                    window.location.href = "chitietsanpham.html";
+                });
+            });
+        });
+
     </script>
 </body>
 

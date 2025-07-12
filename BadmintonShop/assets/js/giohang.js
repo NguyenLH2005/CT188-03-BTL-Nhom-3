@@ -29,6 +29,7 @@ function addItemsToShoppingCart()
     {
         element.addEventListener('click',function(event)
         {
+            event.stopPropagation();
             let item = element.parentElement.parentElement.parentElement.parentElement;
             let  idItem = parseInt(item.querySelector('.idItem').textContent);
             let newItem =
