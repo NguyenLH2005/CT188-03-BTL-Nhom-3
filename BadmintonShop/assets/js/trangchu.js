@@ -1,3 +1,57 @@
+const menuToggle = document.getElementById('menuToggle');
+const dropdownMenu = document.getElementById('dropdownMenu');
+
+menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdownMenu.classList.toggle('show');
+});
+
+/* ************************* */
+const readMoreBtn = document.querySelector('.page-header-navbar__read-more');
+const submenu = document.getElementById('readMoreSubmenu');
+const submenuLinks = submenu.querySelectorAll('a');
+const navLinks = document.querySelectorAll('.page-header-navbar__link');
+
+// Toggle submenu với hiệu ứng trượt
+readMoreBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+
+  // Ẩn tất cả các mục trong submenu trước
+  submenuLinks.forEach(link => {
+    link.style.display = 'none';
+  });
+
+  // Kiểm tra từng phần tử trong nav
+  navLinks.forEach((navItem, index) => {
+    const computed = window.getComputedStyle(navItem);
+    if (computed.display === 'none') {
+      const targetIndex = index - 3;
+      if (submenuLinks[targetIndex]) {
+        submenuLinks[targetIndex].style.display = 'block';
+      }
+    }
+  });
+
+  // Hiện submenu nếu có ít nhất một mục được hiển thị
+  const hasVisible = Array.from(submenuLinks).some(link => link.style.display === 'block');
+  if (hasVisible) {
+    submenu.classList.toggle('show');
+  } else {
+    submenu.classList.remove('show');
+  }
+});
+
+// Đóng submenu khi click ra ngoài
+document.addEventListener('click', (e) => {
+  if (!submenu.contains(e.target) && !readMoreBtn.contains(e.target)) {
+    submenu.classList.remove('show');
+  }
+  if (!dropdownMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+    dropdownMenu.classList.remove('show');
+  }
+});
+
+/* ********************** */
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 const prevBtn = document.querySelector('.page-main__slider--prev');
