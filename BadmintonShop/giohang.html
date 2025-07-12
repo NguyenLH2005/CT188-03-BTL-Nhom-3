@@ -11,11 +11,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./assets/style/trangchuv2.css">
+    <link rel="stylesheet" href="./assets/style/giohang.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="page-header">
+    <!-- <header class="page-header">
         <div class="page-header-container">
             <div class="page-header__logo">
                 <a href="trangchu.html">
@@ -44,113 +46,70 @@
             </div>
         </div>
         <nav class="page-header-navbar">
-            <a class="page-header-navbar__link" href="#">Trang chủ</a>
-            <a class="page-header-navbar__link" href="#">Sản phẩm</a>
+            <a class="page-header-navbar__link" href="trangchu.html">Trang chủ</a>
+            <a class="page-header-navbar__link" href="sanpham.html">Sản phẩm</a>
             <a class="page-header-navbar__link" href="#">Tin tức</a>
             <a class="page-header-navbar__link" href="#">Giới thiệu</a>
             <a class="page-header-navbar__link" href="#">Đăng nhập</a>
             <a class="page-header-navbar__link" href="#">Đăng ký</a>
             <a class="page-header-navbar__link" href="thigiacmaytinh.html"><i class="fa-solid fa-camera"></i></a>
         </nav>
-    </header>
-    <main>
-        <!-- Side bar -->
-        <section class="sidebar">
+    </header> -->
 
-            <div class="sidebar__filter sidebar__filter--all">
-                <div class="sidebar__filter__container sidebar__filter--all__type">
-                    <p>TẤT CẢ</p>
-                    <i class="fa-solid fa-earth-americas"></i>
-                </div>
-            </div>
-            <div class="sidebar__filter sidebar__filter--sort">
-                <div class="sidebar__filter__container sidebar__filter--sort__type">
-                    <p>CHỌN LOẠI HÀNG</p>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="sidebar__filter__subContaniner">
-                    <p>Vợt</p>
-                    <p>Giày</p>
-                    <p>Áo</p>
-                    <p>Váy</p>
-                    <p>Quần</p>
-                </div>
-            </div>
-
-            <div class="sidebar__filter sidebar__filter--price">
-                <div class="sidebar__filter__container sidebar__filter--price__type">
-                    <p>CHỌN MỨC GIÁ</p>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="sidebar__filter__subContaniner">
-                    <p>Giá dưới 500.000đ</p>
-                    <p>500.000đ - 1 triệu</p>
-                    <p>1 - 2 triệu</p>
-                    <p>2 - 3 triệu</p>
-                    <p>Giá trên 3 triệu</p>
-                </div>
-            </div>
-
-            <div class="sidebar__filter sidebar__filter--branch">
-                <div class="sidebar__filter__container sidebar__filter--branch__type">
-                    <p>CHỌN THƯƠNG HIỆU</p>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="sidebar__filter__subContaniner">
-                    <p>Yonex</p>
-                    <p>Lining</p>
-                    <p>Victor</p>
-                    <p>Mizuno</p>
-                    <p>VNB</p>
-                </div>
-            </div>
-
-
-
-            <div class="sidebar__filter sidebar__filter--sort">
-                <div class="sidebar__filter__container sidebar__filter--sort__type">
-                    <p>SẮP XẾP THEO</p>
-                    <i class="fa-solid fa-sort"></i>
-                </div>
-                <div class="sidebar__filter__subContaniner">
-                    <p>Giá tiền từ cao đến thấp</p>
-                    <p>Giá tiền từ thấp đến cao</p>
-                </div>
-            </div>
-
-
-
-        </section>
-
-
-        <!-- List item -->
-        <section class="content">
-            <div href="trangchu.html" class="item" style="display: none;">
-                <div class="item__iconHeart">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-                <div>
-                    <img src="./assets/images/anhsanpham/vot1.jpg" alt="">
-                </div>
-                <div class="descriptionItem">
-                    <p class="idItem" style="display: none;">001</p>
-                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
-                    <div class="infoOtherItem">
-                        <p class="costItem">4.309.000 <sup>đ</sup></p>
-                        <div>
-                            <i class="fas fa-cart-plus"></i>
+    <a href="./sanpham.html">Trở lại</a>
+    <main class="page-main">
+        <table class="page-main__shoppingCart">
+            <thead>
+                <tr>
+                    <td colspan="2">
+                        <div class="page-main__shoppingCart__title">GIỎ HÀNG CỦA BẠN
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
+                    </td>
+                    <td class="page-main__shoppingCart__slogan" colspan="2">Uy tín tạo nên thương hiệu</td>
+                    <td colspan="2" class="page-main__shoppingCart_logo">
+                        <img src="./assets/images/anhtrangchu/logo.jpg" alt="">
+                    </td>
+                </tr>
+                <tr class="page-main__shoppingCart__type">
+                    <td>Số thứ tự</td>
+                    <td>Hình ảnh</td>
+                    <td>Tên sản phẩm</td>
+                    <td>Số lượng</td>
+                    <td>Giá tiền</td>
+                    <td>Xóa</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="emptyCart blink" colspan="6">Giỏ hàng của bạn hiện đang trống !!!</td>
+                    <!-- '<tr class="page-main__shoppingCart__item">'+
+                        '<td>'+ (index + 1) +'</td>'+
+                        '<td>'+
+                            '<img src="'+item.imageItem+'" alt="">'+
+                        '</td>'+
+                        '<td>'+item.nameItem+'</td>'+
+                        '<td>'+'<input type="number" min="1" value="'+item.quantity+'">'+'</td>'+
+                        '<td>'+item.priceItem+'<sup>đ</sup></td>'+
+                        '<td><i class="fa-solid fa-trash"></i></td>'+
+                    '</tr>'; -->
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Tổng tiền</td>
+                    <td colspan="2" class="page-main__shoppingCart_total">0<sup>đ</sup></td>
+                </tr>
+                <tr>
+                    <td class="page-main__shoppingCart__order" colspan="6">
+                        Đặt hàng
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
     </main>
 
-
-    <footer class="page-footer">
+    <!-- <footer class="page-footer">
         <div class="page-footer--top">
             <div class="page-footer--top__block">
                 <p>Thông tin chung</p>
@@ -211,9 +170,14 @@
             <p>GĐ/Sở hữu website: Nguyễn Phùng Hà Lan</p>
             <img src="./assets/images/anhtrangchu/bct.webp" alt="chung nhan">
         </div>
-    </footer>
-    <script src="./assets/js/sanpham.js"></script>
-    <script src="./assets/js/giohang.js">
+    </footer> -->
+
+    <script src="./assets/js/giohang.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            showCart();
+            ordered();
+        });
     </script>
 </body>
 

@@ -11,10 +11,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./assets/style/trangchuv2.css">
+    <link rel="stylesheet" href="./assets/style/thigiacmaytinh.css">
 
 </head>
 
 <body>
+
     <header class="page-header">
         <div class="page-header-container">
             <div class="page-header__logo">
@@ -44,8 +46,8 @@
             </div>
         </div>
         <nav class="page-header-navbar">
-            <a class="page-header-navbar__link" href="#">Trang chủ</a>
-            <a class="page-header-navbar__link" href="#">Sản phẩm</a>
+            <a class="page-header-navbar__link" href="trangchu.html">Trang chủ</a>
+            <a class="page-header-navbar__link" href="sanpham.html">Sản phẩm</a>
             <a class="page-header-navbar__link" href="#">Tin tức</a>
             <a class="page-header-navbar__link" href="#">Giới thiệu</a>
             <a class="page-header-navbar__link" href="#">Đăng nhập</a>
@@ -53,101 +55,82 @@
             <a class="page-header-navbar__link" href="thigiacmaytinh.html"><i class="fa-solid fa-camera"></i></a>
         </nav>
     </header>
-    <main>
-        <!-- Side bar -->
-        <section class="sidebar">
 
-            <div class="sidebar__filter sidebar__filter--all">
-                <div class="sidebar__filter__container sidebar__filter--all__type">
-                    <p>TẤT CẢ</p>
-                    <i class="fa-solid fa-earth-americas"></i>
-                </div>
-            </div>
-            <div class="sidebar__filter sidebar__filter--sort">
-                <div class="sidebar__filter__container sidebar__filter--sort__type">
-                    <p>CHỌN LOẠI HÀNG</p>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="sidebar__filter__subContaniner">
-                    <p>Vợt</p>
-                    <p>Giày</p>
-                    <p>Áo</p>
-                    <p>Váy</p>
-                    <p>Quần</p>
-                </div>
-            </div>
-
-            <div class="sidebar__filter sidebar__filter--price">
-                <div class="sidebar__filter__container sidebar__filter--price__type">
-                    <p>CHỌN MỨC GIÁ</p>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="sidebar__filter__subContaniner">
-                    <p>Giá dưới 500.000đ</p>
-                    <p>500.000đ - 1 triệu</p>
-                    <p>1 - 2 triệu</p>
-                    <p>2 - 3 triệu</p>
-                    <p>Giá trên 3 triệu</p>
-                </div>
-            </div>
-
-            <div class="sidebar__filter sidebar__filter--branch">
-                <div class="sidebar__filter__container sidebar__filter--branch__type">
-                    <p>CHỌN THƯƠNG HIỆU</p>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="sidebar__filter__subContaniner">
-                    <p>Yonex</p>
-                    <p>Lining</p>
-                    <p>Victor</p>
-                    <p>Mizuno</p>
-                    <p>VNB</p>
-                </div>
-            </div>
-
-
-
-            <div class="sidebar__filter sidebar__filter--sort">
-                <div class="sidebar__filter__container sidebar__filter--sort__type">
-                    <p>SẮP XẾP THEO</p>
-                    <i class="fa-solid fa-sort"></i>
-                </div>
-                <div class="sidebar__filter__subContaniner">
-                    <p>Giá tiền từ cao đến thấp</p>
-                    <p>Giá tiền từ thấp đến cao</p>
-                </div>
-            </div>
-
-
-
-        </section>
-
-
-        <!-- List item -->
-        <section class="content">
-            <div href="trangchu.html" class="item" style="display: none;">
-                <div class="item__iconHeart">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-                <div>
-                    <img src="./assets/images/anhsanpham/vot1.jpg" alt="">
-                </div>
-                <div class="descriptionItem">
-                    <p class="idItem" style="display: none;">001</p>
-                    <p class="nameItem">Vợt cầu lông Yonex Nanoflare 700 Pro 2024</p>
-                    <div class="infoOtherItem">
-                        <p class="costItem">4.309.000 <sup>đ</sup></p>
-                        <div>
-                            <i class="fas fa-cart-plus"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
+    <main class="tm-main">
+        <div class="tm-container">
+            <h2>Bạn có đang ở gần cửa hàng VNB của chúng tôi <i class="fa-solid fa-robot"></i><i
+                    class="fa-solid fa-question"></i></h2>
+            <button type="button" onclick="init()">Cho phép kiểm tra ngay với camera</button>
+            <button class="breakProcess" type="button" onclick="breakProcess();">Dừng kiểm tra</button>
+            <div id="webcam-container"></div>
+            <div id="label-container"></div>
+        </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+
+        function breakProcess() {
+            let x = document.querySelector('.breakProcess');
+            x.addEventListener('click', function (evt) {
+                location.reload();
+            });
+        }
+        // More API functions here:
+        // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+        // the link to your model provided by Teachable Machine export panel
+        const URL = "https://teachablemachine.withgoogle.com/models/jvM473fso/";
+
+        let model, webcam, labelContainer, maxPredictions;
+
+        // Load the image model and setup the webcam
+        async function init() {
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+
+            // load the model and metadata
+            // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+            // or files from your local hard drive
+            // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+
+            // Convenience function to setup a webcam
+            const flip = true; // whether to flip the webcam
+            webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+            await webcam.setup(); // request access to the webcam
+            await webcam.play();
+            window.requestAnimationFrame(loop);
+
+            // append elements to the DOM
+            document.getElementById("webcam-container").appendChild(webcam.canvas);
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) { // and class labels
+                labelContainer.appendChild(document.createElement("div"));
+            }
+        }
+
+        async function loop() {
+            webcam.update(); // update the webcam frame
+            await predict();
+            window.requestAnimationFrame(loop);
+        }
+
+        // run the webcam image through the image model
+        async function predict() {
+            // predict can take in an image, video or canvas html element
+            const prediction = await model.predict(webcam.canvas);
+            for (let i = 0; i < maxPredictions; i++) {
+                const classPrediction =
+                    prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            }
+        }
+
+    </script>
+
 
 
     <footer class="page-footer">
@@ -212,9 +195,6 @@
             <img src="./assets/images/anhtrangchu/bct.webp" alt="chung nhan">
         </div>
     </footer>
-    <script src="./assets/js/sanpham.js"></script>
-    <script src="./assets/js/giohang.js">
-    </script>
 </body>
 
 </html>
