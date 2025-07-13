@@ -145,18 +145,18 @@
                     <i class="fa-solid fa-sort"></i>
                 </div>
                 <div class="sidebar__filter__subContaniner">
-                    <p>Giá tiền từ cao đến thấp</p>
                     <p>Giá tiền từ thấp đến cao</p>
+                    <p>Giá tiền từ cao đến thấp</p>
                 </div>
             </div>
 
             <div class="sidebar__filter sidebar__filter--sort">
-                <div class="sidebar__filter__container sidebar__filter--sort__type">
+                <div class="sidebar__filter__container sidebar__filter--sort__type sidebar__filter--more">
                     <p>XEM THÊM</p>
                     <i class="fa-solid fa-sort"></i>
                 </div>
-                <div class="sidebar__filter__subContaniner add_filter_for_moblie">
-                    <p>Vợt</p>
+                <div class="sidebar__filter__subContaniner add_filter_for_moblie sidebar__filter__subContaniner--more">
+                    <p class="racket-more">Vợt</p>
                     <p>Giày</p>
                     <p>Áo</p>
                     <p>Váy</p>
@@ -295,6 +295,42 @@
     <script src="./assets/js/trangchu.js"></script>
 
     <a href="./thigiacmaytinh.html" class="checkLocation"><i class="fa-solid fa-camera"></i></a>
+
+
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const allFilters = [
+                { index: 2, content: document.querySelector(".sidebar .sidebar__filter:nth-child(2) .sidebar__filter__subContaniner") },
+                { index: 3, content: document.querySelector(".sidebar .sidebar__filter:nth-child(3) .sidebar__filter__subContaniner") },
+                { index: 4, content: document.querySelector(".sidebar .sidebar__filter:nth-child(4) .sidebar__filter__subContaniner") },
+                { index: 5, content: document.querySelector(".sidebar .sidebar__filter:nth-child(5) .sidebar__filter__subContaniner") },
+            ];
+
+            const addMoreContainer = document.querySelector(".add_filter_for_moblie");
+
+            function updateMoreSection() {
+                // Xóa nội dung cũ
+                addMoreContainer.innerHTML = '';
+
+                allFilters.forEach(filter => {
+                    const filterElement = document.querySelector(`.sidebar .sidebar__filter:nth-child(${filter.index})`);
+                    if (window.getComputedStyle(filterElement).display === "none") {
+                        const clone = filter.content.cloneNode(true);
+                        clone.querySelectorAll("p").forEach(p => {
+                            addMoreContainer.appendChild(p.cloneNode(true));
+                        });
+                    }
+                });
+            }
+
+            // Cập nhật ban đầu
+            updateMoreSection();
+
+            // Cập nhật lại khi resize
+            window.addEventListener('resize', updateMoreSection);
+        });
+    </script> -->
+
 </body>
 
 </html>
