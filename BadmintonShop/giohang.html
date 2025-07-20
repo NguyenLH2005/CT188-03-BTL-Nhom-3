@@ -10,14 +10,18 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="./assets/style/trangchuv2.css">
+
+    <link rel="stylesheet" href="./assets/style/thigiacmaytinh.css">
+
     <link rel="stylesheet" href="./assets/style/giohang.css">
+    <link rel="stylesheet" href="./assets/style/trangchuv2.css">
+
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- <header class="page-header">
+    <header class="page-header">
         <div class="page-header-container">
             <div class="page-header__logo">
                 <a href="trangchu.html">
@@ -30,33 +34,62 @@
             </div>
             <form action="#" class="page-header__search">
                 <input type="text" class="page-header__search--input" placeholder="Nhập từ khóa...">
-                <button onclick="search()" class="page-header__search--button">
+                <button class="page-header__search--button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
             <div class="page-header__tool">
+                <div class="page-header__tool-item hotline">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>HOTLINE</p>
+                </div>
                 <div class="page-header__tool-item">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    GIỎ HÀNG
+                    <p>GIỎ HÀNG</p>
                 </div>
-                <div class="page-header__tool-item">
+                <a href="taikhoan.html" class="page-header__tool-item">
                     <i class="fa-solid fa-user"></i>
-                    TÀI KHOẢN
-                </div>
+                    <p>TÀI KHOẢN</p>
+                </a>
             </div>
         </div>
         <nav class="page-header-navbar">
             <a class="page-header-navbar__link" href="trangchu.html">Trang chủ</a>
             <a class="page-header-navbar__link" href="sanpham.html">Sản phẩm</a>
             <a class="page-header-navbar__link" href="#">Tin tức</a>
-            <a class="page-header-navbar__link" href="#">Giới thiệu</a>
-            <a class="page-header-navbar__link" href="#">Đăng nhập</a>
-            <a class="page-header-navbar__link" href="#">Đăng ký</a>
-            <a class="page-header-navbar__link" href="thigiacmaytinh.html"><i class="fa-solid fa-camera"></i></a>
+            <a class="page-header-navbar__link" href="gioithieu.html">Giới thiệu</a>
+            <a class="page-header-navbar__link" href="lienhe.html">Liên hệ</a>
+            <a class="page-header-navbar__link" href="dangnhap.html">Đăng nhập</a>
+            <a class="page-header-navbar__link" href="dangki.html">Đăng ký</a>
+            <span class="page-header-navbar__read-more">Xem Thêm</span>
+            <div class="read-more-submenu" id="readMoreSubmenu">
+                <a href="gioithieu.html">Giới thiệu</a>
+                <a href="lienhe.html">Liên hệ</a>
+                <a href="dangnhap.html">Đăng nhập</a>
+                <a href="dangki.html">Đăng ký</a>
+            </div>
+            <form action="#" class="page-header__search">
+                <input type="text" class="page-header__search--input" placeholder="Nhập từ khóa...">
+                <button class="page-header__search--button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="menu-wrapper">
+                <div class="menu-icon" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <ul id="menuItems">
+                        <li><a href="trangchu.html">Trang chủ</a></li>
+                        <li><a href="sanpham.html">Sản phẩm</a></li>
+                        <li><a href="tintuc.html">Tin tức</a></li>
+                        <li><a href="gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="lienhe.html">Liên hệ</a></li>
+                        <li><a href="dangnhap.html">Đăng nhập</a></li>
+                        <li><a href="dangki.html">Đăng kí</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-    </header> -->
-
-    <a href="./sanpham.html">Trở lại</a>
+    </header>
     <main class="page-main">
         <table class="page-main__shoppingCart">
             <thead>
@@ -109,7 +142,7 @@
         </table>
     </main>
 
-    <!-- <footer class="page-footer">
+    <footer class="page-footer">
         <div class="page-footer--top">
             <div class="page-footer--top__block">
                 <p>Thông tin chung</p>
@@ -146,7 +179,7 @@
                     <li><a href="#">Chính sách xử lý khiếu nại</a></li>
                     <li><a href="#">Chính sách vận chuyển</a></li>
                     <li><a href="#">Điều khoản sử dụng</a></li>
-                    <li><a href="#">Chính Sách Bảo Mật Thông Ti</a></li>
+                    <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
                     <li><a href="#">Chính sách nhượng quyền</a></li>
                 </ul>
             </div>
@@ -170,8 +203,12 @@
             <p>GĐ/Sở hữu website: Nguyễn Phùng Hà Lan</p>
             <img src="./assets/images/anhtrangchu/bct.webp" alt="chung nhan">
         </div>
-    </footer> -->
+    </footer>
+    <a href="./thigiacmaytinh.html" class="checkLocation"><i class="fa-solid fa-camera"></i></a>
+    <script src="./assets/js/trangchu.js"></script>
+    <script src="./assets/js/giohang.js"></script>
 
+    <script src="./assets/js/trangchu.js"></script>
     <script src="./assets/js/giohang.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {

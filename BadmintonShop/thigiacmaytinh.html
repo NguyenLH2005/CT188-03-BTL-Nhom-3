@@ -30,35 +30,66 @@
             </div>
             <form action="#" class="page-header__search">
                 <input type="text" class="page-header__search--input" placeholder="Nhập từ khóa...">
-                <button onclick="search()" class="page-header__search--button">
+                <button class="page-header__search--button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
             <div class="page-header__tool">
+                <div class="page-header__tool-item hotline">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>HOTLINE</p>
+                </div>
                 <div class="page-header__tool-item">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    GIỎ HÀNG
+                    <p>GIỎ HÀNG</p>
                 </div>
-                <div class="page-header__tool-item">
+                <a href="taikhoan.html" class="page-header__tool-item">
                     <i class="fa-solid fa-user"></i>
-                    TÀI KHOẢN
-                </div>
+                    <p>TÀI KHOẢN</p>
+                </a>
             </div>
         </div>
         <nav class="page-header-navbar">
             <a class="page-header-navbar__link" href="trangchu.html">Trang chủ</a>
             <a class="page-header-navbar__link" href="sanpham.html">Sản phẩm</a>
             <a class="page-header-navbar__link" href="#">Tin tức</a>
-            <a class="page-header-navbar__link" href="#">Giới thiệu</a>
-            <a class="page-header-navbar__link" href="#">Đăng nhập</a>
-            <a class="page-header-navbar__link" href="#">Đăng ký</a>
-            <a class="page-header-navbar__link" href="thigiacmaytinh.html"><i class="fa-solid fa-camera"></i></a>
+            <a class="page-header-navbar__link" href="gioithieu.html">Giới thiệu</a>
+            <a class="page-header-navbar__link" href="lienhe.html">Liên hệ</a>
+            <a class="page-header-navbar__link" href="dangnhap.html">Đăng nhập</a>
+            <a class="page-header-navbar__link" href="dangki.html">Đăng ký</a>
+            <span class="page-header-navbar__read-more">Xem Thêm</span>
+            <div class="read-more-submenu" id="readMoreSubmenu">
+                <a href="gioithieu.html">Giới thiệu</a>
+                <a href="lienhe.html">Liên hệ</a>
+                <a href="dangnhap.html">Đăng nhập</a>
+                <a href="dangki.html">Đăng ký</a>
+            </div>
+            <form action="#" class="page-header__search">
+                <input type="text" class="page-header__search--input" placeholder="Nhập từ khóa...">
+                <button class="page-header__search--button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="menu-wrapper">
+                <div class="menu-icon" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <ul id="menuItems">
+                        <li><a href="trangchu.html">Trang chủ</a></li>
+                        <li><a href="sanpham.html">Sản phẩm</a></li>
+                        <li><a href="tintuc.html">Tin tức</a></li>
+                        <li><a href="gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="lienhe.html">Liên hệ</a></li>
+                        <li><a href="dangnhap.html">Đăng nhập</a></li>
+                        <li><a href="dangki.html">Đăng kí</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="tm-main">
         <div class="tm-container">
-            <h2>Bạn có đang ở gần cửa hàng VNB của chúng tôi <i class="fa-solid fa-robot"></i><i
+            <h2>Bạn có đang ở gần cửa hàng Lanh Chanh Shop của chúng tôi <i class="fa-solid fa-robot"></i><i
                     class="fa-solid fa-question"></i></h2>
             <button type="button" onclick="init()">Cho phép kiểm tra ngay với camera</button>
             <button class="breakProcess" type="button" onclick="breakProcess();">Dừng kiểm tra</button>
@@ -170,7 +201,7 @@
                     <li><a href="#">Chính sách xử lý khiếu nại</a></li>
                     <li><a href="#">Chính sách vận chuyển</a></li>
                     <li><a href="#">Điều khoản sử dụng</a></li>
-                    <li><a href="#">Chính Sách Bảo Mật Thông Ti</a></li>
+                    <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
                     <li><a href="#">Chính sách nhượng quyền</a></li>
                 </ul>
             </div>
@@ -195,6 +226,8 @@
             <img src="./assets/images/anhtrangchu/bct.webp" alt="chung nhan">
         </div>
     </footer>
+    <a href="./thigiacmaytinh.html" class="checkLocation"><i class="fa-solid fa-camera"></i></a>
+    <script src="./assets/js/trangchu.js"></script>
 </body>
 
 </html>

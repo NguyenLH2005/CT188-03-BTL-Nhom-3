@@ -19,5 +19,5 @@ document.getElementById("register-form").addEventListener("submit", function (e)
   }));
 
   alert("Đăng ký thành công! Mời bạn đăng nhập.");
-  window.location.href = "dangnhap.html"; // → nhảy qua đăng nhập
+  window.location.href = "./dangnhap.html"; // → nhảy qua đăng nhập
 });

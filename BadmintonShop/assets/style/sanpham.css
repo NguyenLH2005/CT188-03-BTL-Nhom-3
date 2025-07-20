@@ -255,6 +255,43 @@ main {
   color: green;
 }
 
+@media only screen and (max-width: 767px) {
+  .sidebar .sidebar__filter:nth-child(1) {
+    display: flex;
+    width: calc(80%);
+    justify-content: center;
+    font-size: 20px;
+  }
+  .sidebar .sidebar__filter:nth-child(2) {
+    display: flex;
+    width: calc(80%);
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .sidebar .sidebar__filter:nth-child(3) {
+    display: flex;
+    width: calc(80%);
+    justify-content: center;
+    font-size: 20px;
+  }
+  .sidebar .sidebar__filter:nth-child(4) {
+    display: flex;
+    width: calc(80%);
+    justify-content: center;
+    font-size: 20px;
+  }
+  .sidebar .sidebar__filter:nth-child(5) {
+    display: flex;
+    width: calc(80%);
+    justify-content: center;
+    font-size: 20px;
+  }
+  .sidebar .sidebar__filter:nth-child(6) {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
   .content {
     grid-area: content;
@@ -296,12 +333,39 @@ main {
     text-align: center;
   }
 
+  .sidebar .sidebar__filter:nth-child(1) {
+    display: flex;
+    width: calc(50%-12px);
+    justify-content: center;
+    font-size: 20px;
+  }
   .sidebar .sidebar__filter:nth-child(2) {
-    display: block;
+    display: flex;
+    width: calc(50%-12px);
+    justify-content: center;
+    font-size: 20px;
   }
 
   .sidebar .sidebar__filter:nth-child(3) {
-    display: block;
+    display: flex;
+    width: calc(50%-12px);
+    justify-content: center;
+    font-size: 20px;
+  }
+  .sidebar .sidebar__filter:nth-child(4) {
+    display: flex;
+    width: calc(50%-12px);
+    justify-content: center;
+    font-size: 20px;
+  }
+  .sidebar .sidebar__filter:nth-child(5) {
+    display: flex;
+    width: calc(50%-12px);
+    justify-content: center;
+    font-size: 20px;
+  }
+  .sidebar .sidebar__filter:nth-child(6) {
+    display: none;
   }
 }
 
@@ -342,6 +406,9 @@ main {
     align-items: center;
   }
 
+  .sidebar .sidebar__filter:nth-child(1) {
+    display: block;
+  }
   .sidebar .sidebar__filter:nth-child(2) {
     display: block;
   }
@@ -417,4 +484,15 @@ main {
   .sidebar .sidebar__filter:nth-child(6) {
     display: none;
   }
+}
+
+.no-products-message {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: red;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 20px 0;
 }

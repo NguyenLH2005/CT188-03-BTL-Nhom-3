@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 20px;
 }
 
 body {
@@ -140,17 +139,13 @@ input {
   background-color: #fff0e6;
 }
 
-
-.page-main__shoppingCart tfoot td
-{
+.page-main__shoppingCart tfoot td {
   font-weight: bold;
 }
 .page-main__shoppingCart_total {
   text-align: center;
   padding: 200px;
 }
-
-
 
 .blink {
   animation: blinkEffect 1s infinite;
@@ -293,7 +288,6 @@ input {
   }
 
   .emptyCart {
-
     font-size: 20px;
     font-weight: bold;
     padding: 20px 20px;

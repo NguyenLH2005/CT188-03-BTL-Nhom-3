@@ -167,13 +167,17 @@ body {
     transition: all 0.2s;
 }
 
-.tool-item>i {
+.tool-item i {
     padding: 0.75rem;
     background-color: #fff;
     border-radius: 50%;
     font-size: 1.25rem;
     margin-bottom: 8px;
     border: 1.5px solid rgba(7, 163, 114, 0.516);
+}
+
+a.tool-item {
+    text-decoration: none;
 }
 
 .page-header-navbar {
