@@ -10,7 +10,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="./assets/style/trangchuv2.css">
+    <link rel="stylesheet" href="./assets/style/formchung.css">
     <link rel="stylesheet" href="./assets/style/chitietsanpham.css">
     <link rel="stylesheet" href="./assets/style/thigiacmaytinh.css">
 
@@ -25,33 +25,48 @@
                 </a>
             </div>
             <div class="page-header__hotline">
-                <i class="fa-solid fa-phone"></i>
-                HOTLINE:<a href="#">0977508430</a>|<a href="#">0338000308</a>
+                <p>
+                    <i class="fa-solid fa-phone"></i>HOTLINE:<a href="lienhe.html">0977508430</a>|<a
+                        href="lienhe.html">0338000308</a>
+                </p>
             </div>
-            <form action="#" class="page-header__search">
-                <input type="text" class="page-header__search--input" placeholder="Nhập từ khóa...">
-                <button onclick="search()" class="page-header__search--button">
+            <form action="#" class="search">
+                <input type="text" class="search-input" placeholder="Nhập từ khóa...">
+                <button class="search-button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
             <div class="page-header__tool">
-                <div class="page-header__tool-item">
+                <div class="tool-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>HOTLINE</p>
+                </div>
+                <div class="tool-item">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    GIỎ HÀNG
+                    <p>GIỎ HÀNG</p>
                 </div>
-                <div class="page-header__tool-item">
+                <a href="taikhoan.html" class="tool-item">
                     <i class="fa-solid fa-user"></i>
-                    TÀI KHOẢN
-                </div>
+                    <p>TÀI KHOẢN</p>
+                </a>
             </div>
         </div>
         <nav class="page-header-navbar">
-            <a class="page-header-navbar__link" href="trangchu.html">Trang chủ</a>
-            <a class="page-header-navbar__link" href="sanpham.html">Sản phẩm</a>
-            <a class="page-header-navbar__link" href="tintuc.html">Tin tức</a>
-            <a class="page-header-navbar__link" href="gioithieu">Giới thiệu</a>
-            <a class="page-header-navbar__link" href="dangnhap.html">Đăng nhập</a>
-            <a class="page-header-navbar__link" href="dangki.html">Đăng ký</a>
+            <a class="navbar-link" href="trangchu.html">Trang chủ</a>
+            <a class="navbar-link" href="sanpham.html">Sản phẩm</a>
+            <a class="navbar-link" href="tintuc.html">Tin tức</a>
+            <a class="navbar-link" href="gioithieu.html">Giới thiệu</a>
+            <a class="navbar-link" href="lienhe.html">Liên hệ</a>
+            <a class="navbar-link" href="dangnhap.html">Đăng nhập</a>
+            <a class="navbar-link" href="dangki.html">Đăng ký</a>
+            <span class="navbar-link read-more">Xem Thêm</span>
+            <form action="#" class="search">
+                <input type="text" class="search-input" placeholder="Nhập từ khóa...">
+                <button class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <span class="navbar-link read-more"><i class="fa-solid fa-bars"></i></span>
         </nav>
     </header>
     <main class="page-main">
@@ -182,7 +197,8 @@
                 };
 
                 let cartData = localStorage.getItem('cartItems'); // Lấy dữ liệu từ localStorage
-                let presentCart = cartData ? JSON.parse(cartData) : []; // Nếu có thì parse, không có thì dùng mảng rỗng
+                let presentCart = cartData ? JSON.parse(cartData) :
+            []; // Nếu có thì parse, không có thì dùng mảng rỗng
                 const isExist = presentCart.find(item => item.idItem === newItem.idItem);
 
                 if (isExist) {
@@ -197,10 +213,9 @@
         });
     </script>
 
-    <script src="./assets/js/trangchu.js"></script>
+    <script src="./assets/js/formchung.js"></script>
     <script src="./assets/js/giohang.js"></script>
 
 </body>
 
 </html>
-
