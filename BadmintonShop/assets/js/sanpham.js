@@ -191,8 +191,6 @@ const itemList = [
     costItem: "149.000"
   },
 
-
-
 ]
 
 var itemContainer = document.querySelector('.content');
