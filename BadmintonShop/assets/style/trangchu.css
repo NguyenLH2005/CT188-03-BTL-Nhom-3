@@ -216,7 +216,6 @@
     transform:scale(calc(0.8 + 0.2 * var(--ratio)));
     opacity: var(--ratio);
     transition: transform 0.4s ease, opacity 0.4s ease;
-    z-index: 1;
 }
 
 .sale-item img {
@@ -228,7 +227,6 @@
 
 .sale-item:hover {
     transform: scale(1.05);
-    z-index: 2;
 }
 
 @media (min-width: 1024px) {
