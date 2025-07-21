@@ -2,7 +2,6 @@
     grid-area: main;
     width: 100%;
     margin: 10px 0;
-    position: relative;
     padding: 16px;
     max-width: 100%;
     color: #003366;
@@ -10,7 +9,7 @@
 
 .ct-title {
     font-size: 1.5rem;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     color: #003366;
 }
 
@@ -32,15 +31,13 @@
     line-height: 1.6;
     color: #333;
     margin-bottom: 60px;
-    /* để nút không che nội dung */
 }
 
 /* Điều hướng */
 .ct-nav {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
+    margin: 0 auto;
+
+    width: 90%;
     display: flex;
     justify-content: space-between;
 }
@@ -49,7 +46,7 @@
     background-color: darkblue;
     color: #fff;
     border: none;
-    padding: 8px 16px;
+    padding: 0.5rem 16px;
     font-size: 0.9rem;
     border-radius: 4px;
     cursor: pointer;
@@ -65,7 +62,6 @@
     background-color: rgb(13, 67, 67);
 }
 
-/* Tablet: từ 768px */
 @media (min-width: 768px) {
     .page-main {
         max-width: 720px;
@@ -81,7 +77,6 @@
     }
 }
 
-/* Desktop: từ 1024px */
 @media (min-width: 1024px) {
     .page-main {
         max-width: 960px;
