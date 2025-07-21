@@ -159,6 +159,33 @@
 
     <script src="./assets/js/sanpham.js"></script>
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            if (productId) {
+                const item = itemList.find(p => p.id.toString() === productId);
+                if (item) {
+                    document.querySelector(".page-main img").src = item.img;
+                    document.querySelector(".page-main h1").textContent = item.nameItem;
+                    document.querySelector(".page-main .product-id").textContent = "Mã: " + item.id;
+                    document.querySelector(".page-main .product-price").textContent = item.costItem + " đ";
+
+                    // Lưu vào localStorage để dùng cho giỏ hàng
+                    const productData = {
+                        id: item.id,
+                        name: item.nameItem,
+                        image: item.img,
+                        price: item.costItem
+                    };
+                    localStorage.setItem("selectedProduct", JSON.stringify(productData));
+                }
+            }
+        });
+    </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const productData = JSON.parse(localStorage.getItem("selectedProduct"));
@@ -199,7 +226,7 @@
 
                 let cartData = localStorage.getItem('cartItems'); // Lấy dữ liệu từ localStorage
                 let presentCart = cartData ? JSON.parse(cartData) :
-            []; // Nếu có thì parse, không có thì dùng mảng rỗng
+                    []; // Nếu có thì parse, không có thì dùng mảng rỗng
                 const isExist = presentCart.find(item => item.idItem === newItem.idItem);
 
                 if (isExist) {
