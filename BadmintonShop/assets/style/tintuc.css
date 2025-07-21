@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-/* Search bar */
+/* Thanh tìm kiếm */
 .search-news {
     width: 100%;
     display: flex;
@@ -55,7 +55,7 @@
     background: #005fa3;
 }
 
-/* News content (mobile-first) */
+/*khung tin tức*/
 .news-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -109,7 +109,19 @@
     color: black;
 }
 
-/* Pagination */
+@media (min-width: 768px) {
+    .news-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .news-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Phân trang */
 .pagination {
     display: flex;
     justify-content: center;
@@ -150,16 +162,4 @@
 .page-number.active {
     background: #007acc;
     color: #fff;
-}
-
-@media (min-width: 768px) {
-    .news-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .news-content {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }

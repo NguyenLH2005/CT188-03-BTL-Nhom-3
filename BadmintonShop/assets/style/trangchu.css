@@ -1,4 +1,5 @@
 /* MAIN **************************************/
+/* Slider */
 .page-main {
     grid-area: main;
     width: 100%;
@@ -7,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 10px 0;
-    padding-bottom: 10px;
+    padding: 10px 0;
 }
 
 .page-main__slider {
@@ -91,100 +92,22 @@
     width: 100%;
 }
 
-/* Mobile-first Flexbox layout */
-.page-main__content--commitments {
+/** section-title chung */
+.page-main__content--commitments,
+.page-main__content--latest-news,
+.page-main__content--featured-products {
     width: 90%;
     margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
-/* Mỗi item mặc định chiếm 100% (1 cột) */
-.commitment-item {
-    width: 30%;
-    flex: 1 1 100%;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-
-    --ratio: 0;
-    transform: translateY(calc(20px * (1 - var(--ratio)))) scale(calc(0.8 + 0.2 * var(--ratio)));
-    opacity: var(--ratio);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border: 1px solid #0a3d62;
-    z-index: 1;
-}
-
-/* Tablet (min-width: 768px) — 2 cột */
-@media (min-width: 768px) {
-    .commitment-item {
-        flex: 1 1 calc(50% - 0.5rem);
-    }
-}
-
-/* Desktop (min-width: 1024px) — 4 cột */
-@media (min-width: 1024px) {
-    .commitment-item {
-        flex: 1 1 calc(25% - 0.75rem);
-    }
-}
-
-/* Hover effect */
-.commitment-item:hover {
-    transform: translateY(0) scale(calc((0.8 + 0.2 * var(--ratio)) * 1.1));
-    z-index: 2;
-}
-
-/* Icon styling */
-.icon {
-    font-size: 2rem;
-    color: #0a3d62;
-    transition: transform 0.3s ease;
-}
-
-.commitment-item:hover .icon {
-    transform: scale(1.2);
-}
-
-/* Title styling */
-.commitment-title {
-    margin: 0.5rem 0 0;
-    font-size: 1rem;
-    color: #0a3d62;
-    font-weight: 550;
-    transition: font-size 0.3s ease;
-}
-
-.commitment-item:hover .commitment-title {
-    font-size: 1.1rem;
-}
-
-/* Description styling */
-.commitment-desc {
-    display: block;
-    margin-top: 0.3rem;
-    font-size: 0.9rem;
-    color: #0a3d62;
-    font-weight: 450;
-    transition: font-size 0.3s ease;
-}
-
-.commitment-item:hover .commitment-desc {
-    font-size: 1rem;
-}
-
-
-/* ========== SALE SECTION ========== */
-
-.page-main__content--sale {
-    display: flex;
-    width: 90%;
+.page-main__content--latest-news,
+.page-main__content--featured-products {
     flex-direction: column;
     align-items: center;
-    margin: 10px 0;
 }
 
 .section-heading {
@@ -195,7 +118,6 @@
     font-weight: 500;
 }
 
-/* -------- HORIZON -------- */
 .section-divider {
     width: 300px;
     height: 3px;
@@ -206,7 +128,81 @@
     border: none;
 }
 
-/* Wrapper mới cho 3 sale-item */
+/* Cam kết */
+.commitment-item {
+    position: relative;
+    flex: 1 1 100%;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+
+    --ratio: 0;
+    transform: scale(calc(0.8 + 0.2 * var(--ratio)));
+    opacity: var(--ratio);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border: 1px solid #0a3d62;
+}
+
+.commitment-item:hover {
+    transform: scale(1.05);
+
+}
+
+.icon {
+    font-size: 2rem;
+    color: #0a3d62;
+    transition: transform 0.3s ease;
+}
+
+.commitment-item:hover .icon {
+    transform: scale(1.2);
+}
+
+.commitment-title {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #0a3d62;
+    font-weight: 550;
+    transition: font-size 0.3s ease;
+}
+
+.commitment-item:hover .commitment-title {
+    font-size: 1.1rem;
+}
+
+.commitment-desc {
+    font-size: 0.9rem;
+    color: #0a3d62;
+    font-weight: 450;
+    transition: font-size 0.3s ease;
+}
+
+.commitment-item:hover .commitment-desc {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .commitment-item {
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .commitment-item {
+        flex: 1 1 calc(25% - 0.75rem);
+    }
+}
+
+/*Sale*/
+.page-main__content--sale {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
 .sale-items-wrapper {
     display: flex;
     flex-direction: column;
@@ -217,8 +213,7 @@
 .sale-item {
     --ratio: 0;
     flex: 1 1 100%;
-    transform:
-        translateY(calc(20px * (1 - var(--ratio)))) scale(calc(0.8 + 0.2 * var(--ratio)));
+    transform:scale(calc(0.8 + 0.2 * var(--ratio)));
     opacity: var(--ratio);
     transition: transform 0.4s ease, opacity 0.4s ease;
     z-index: 1;
@@ -232,7 +227,7 @@
 }
 
 .sale-item:hover {
-    transform: scale(calc((0.8 + 0.2 * var(--ratio)) * 1.1));
+    transform: scale(1.05);
     z-index: 2;
 }
 
@@ -248,14 +243,7 @@
     }
 }
 
-/* ========= Featured Products ========= */
-.page-main__content--featured-products {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin: 10px 0;
-}
+/*Sản phẩm nổi bật*/
 
 .slider-container {
     position: relative;
@@ -343,14 +331,7 @@
     }
 }
 
-/* ===== Tin tức mới (inline 3 cards) ===== */
-.page-main__content--latest-news {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin: 10px 0;
-}
+/*Tin tức mới*/
 
 .news-wrapper {
     display: flex;
@@ -370,7 +351,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transform: translateY(calc(20px * (1 - var(--ratio)))) scale(calc(0.8 + 0.2 * var(--ratio)));
+    transform: scale(calc(0.8 + 0.2 * var(--ratio)));
     opacity: var(--ratio);
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -408,7 +389,6 @@
     color: black;
 }
 
-/* Tablet: 2 cột */
 @media (min-width: 768px) {
     .news-wrapper {
         flex-direction: row;
@@ -421,7 +401,6 @@
     }
 }
 
-/* Desktop: 3 cột */
 @media (min-width: 1024px) {
     .news-wrapper {
         flex-wrap: nowrap;

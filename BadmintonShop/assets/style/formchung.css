@@ -296,7 +296,7 @@ a.tool-item {
     cursor: pointer;
 }
 
-/*Thanh tiem kiem kiem*/
+/*Thanh tìm kiếm*/
 .search-results {
     position: absolute;
     top: 100%;
@@ -418,7 +418,6 @@ a.tool-item {
     }
 }
 
-/* Desktop (min-width: 1024px) — 4 cột */
 @media (min-width: 1024px) {
     .page-footer--top__block {
         flex: 1 1 calc(25% - 1.25rem);

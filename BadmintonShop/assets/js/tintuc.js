@@ -224,7 +224,6 @@
         };
     }
 
-    // Debounce resize
     function debounce(fn, delay) {
         let timer;
         return () => {

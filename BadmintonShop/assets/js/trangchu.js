@@ -1,5 +1,4 @@
 (() => {
-    // Dữ liệu tách biệt khỏi global
     const newsData = [{
             id: 1,
             title: 'Ưa đãi lớn - Khuyến mãi khủng nhân dịp khai trương Cửa hàng thể thao VNB TP. Vĩnh Long',
@@ -87,7 +86,7 @@
             });
         }
 
-        //Slider chính
+        //Slider 
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
         const prevBtn = document.querySelector('.page-main__slider--prev');
@@ -140,7 +139,7 @@
             showSlide(current);
         }
 
-        // Featured Products
+        // Sản phẩm mới
         const sectionFeatured = document.querySelector('.page-main__content--featured-products');
         if (sectionFeatured) {
             const track = sectionFeatured.querySelector('.slider-track');
