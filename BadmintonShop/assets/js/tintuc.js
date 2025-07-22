@@ -143,7 +143,7 @@
         const pageItems = filtered.slice(start, start + perPage);
 
         if (pageItems.length === 0) {
-            grid.innerHTML = `<p>Không tìm thấy tin tức nào 😢</p>`;
+            grid.innerHTML = `<p>Không tìm thấy tin tức nào =((</p>`;
             renderPagination(1);
             return;
         }

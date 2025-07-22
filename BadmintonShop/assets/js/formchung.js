@@ -274,7 +274,7 @@
                         const li = document.createElement('li');
                         li.textContent = `${item.nameItem} ~ ${item.costItem}`;
                         li.addEventListener('click', () => {
-                            window.location.href = `chitietsanpham.html?id=${item.id}`;
+                            location.href = `chitietsanpham.html?id=${item.id}`;
                         });
                         ul.appendChild(li);
                     });
