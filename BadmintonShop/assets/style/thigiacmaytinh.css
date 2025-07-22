@@ -44,11 +44,12 @@ body {
 }
 
 .checkLocation {
-  position: absolute;
-  font-size: 32px;
-  padding: 16px;
+  position: fixed;
+  font-size: 20px;
+  padding: 8px;
   background-color: rgb(197, 40, 40);
   left: 0;
   bottom: 0;
-  color: #fff
+  color: #fff;
+  border: solid 10px;
 }
